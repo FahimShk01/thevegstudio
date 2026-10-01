@@ -1,0 +1,16 @@
+/* ================================================
+   THE VEG STUDIO - GLOBAL CSS VARIABLES & THEME
+================================================ */
+:root {
+  --cream: #f0ead6;
+  --cream-dark: #e8dfc4;
+  --green-deep: #3d6e1f;
+  --green-mid: #4d8a22;
+  --green-light: #6eaa30;
+  --gold: #c8952a;
+  --brown-dark: #3d2010;
+  --brown-mid: #6b3d1e;
+  --text-dark: #2a1a08;
+  --text-mid: #4a3020;
+  --white: #fefef8;
+}

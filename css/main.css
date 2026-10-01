@@ -1,0 +1,14 @@
+/* ==========================================================================
+   THE VEG STUDIO — MASTER STYLESHEET ENTRY POINT
+   Modular Multi-Tier Web Architecture
+   ========================================================================== */
+
+/* 1. Base & Reset */
+@import url("base/variables.css");
+@import url("base/reset.css");
+
+/* 2. Components */
+@import url("components/loader.css");
+
+/* 3. Core Application Styles */
+@import url("style.css");

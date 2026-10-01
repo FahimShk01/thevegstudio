@@ -1,0 +1,417 @@
+/* ================================================================
+   PREMIUM PAGE LOADER — The Veg Studio
+   High-Contrast Warm Beige & Cream Background with Bottle Green Accents
+================================================================ */
+
+/* -- Keyframes -- */
+@keyframes ldr-arc {
+  0%   { stroke-dashoffset: 496; }
+  50%  { stroke-dashoffset: 78;  }
+  100% { stroke-dashoffset: 496; }
+}
+@keyframes ldr-arc-inner {
+  0%   { stroke-dashoffset: 371; }
+  50%  { stroke-dashoffset: 58;  }
+  100% { stroke-dashoffset: 371; }
+}
+@keyframes ldr-arc-color {
+  0%, 100% { stroke: #1e6020; }
+  50%       { stroke: #c8952a; }
+}
+@keyframes ldr-rotate-cw  { to { transform: rotate(360deg);  } }
+@keyframes ldr-rotate-ccw { to { transform: rotate(-360deg); } }
+@keyframes ldr-breathe {
+  0%, 100% { transform: scale(1);    }
+  50%       { transform: scale(1.045); }
+}
+@keyframes ldr-glow-pulse {
+  0%, 100% { opacity: 0.35; transform: translate(-50%,-50%) scale(1);    }
+  50%       { opacity: 0.60; transform: translate(-50%,-50%) scale(1.15); }
+}
+@keyframes ldr-shimmer-sweep {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes ldr-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes ldr-bar {
+  0%   { transform: scaleX(0);   }
+  40%  { transform: scaleX(0.55); }
+  75%  { transform: scaleX(0.85); }
+  100% { transform: scaleX(1);   }
+}
+@keyframes ldr-bar-shine {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes ldr-wave {
+  0%, 60%, 100% { transform: translateY(0);    opacity: 0.45; }
+  30%            { transform: translateY(-7px); opacity: 1;    }
+}
+@keyframes ldr-speck {
+  0%   { transform: translateY(0)      scale(1);   opacity: 0.3; }
+  60%  { transform: translateY(-85px)  scale(1.4); opacity: 0.6; }
+  100% { transform: translateY(-160px) scale(0.4); opacity: 0;   }
+}
+@keyframes ldr-sparkle {
+  0%, 100% { opacity: 0;    transform: scale(0.4) rotate(0deg);   }
+  50%       { opacity: 0.75; transform: scale(1)   rotate(180deg); }
+}
+@keyframes ldr-bg-pan {
+  0%   { background-position: 0%   0%;   }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0%   0%;   }
+}
+
+/* -- CONTAINER: Luxurious Warm Beige Canvas -- */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse 700px 700px at 50% 45%, rgba(254, 250, 240, 0.8) 0%, rgba(240, 234, 214, 0.4) 50%, transparent 80%),
+    radial-gradient(circle 400px at 15% 15%, rgba(200, 149, 42, 0.12) 0%, transparent 60%),
+    radial-gradient(circle 450px at 85% 85%, rgba(45, 80, 22, 0.08) 0%, transparent 65%),
+    linear-gradient(
+      145deg,
+      #f8f4eb 0%,
+      #f0e9d8 25%,
+      #e8dfc8 50%,
+      #dfd4ba 75%,
+      #ebd4a2 100%
+    );
+  background-size: 250% 250%;
+  animation: ldr-bg-pan 14s ease-in-out infinite;
+  overflow: hidden;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* Clean dissolve on loader exit */
+#page-loader.fade-out {
+  opacity: 0 !important;
+  transform: none !important;
+  pointer-events: none !important;
+  transition: opacity 0.4s ease-out !important;
+}
+
+#page-loader.fade-out .ldr-center {
+  opacity: 0;
+  transition: opacity 0.35s ease-out;
+  transform: none;
+}
+
+#page-loader.fade-out .ldr-glow,
+#page-loader.fade-out .ldr-specks,
+#page-loader.fade-out .ldr-sparkle {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+#page-loader.gone {
+  display: none !important;
+}
+
+/* -- AMBIENT SUNLIT WARM GLOW -- */
+.ldr-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(240, 234, 214, 0.6) 35%,
+    rgba(200, 149, 42, 0.15) 55%,
+    transparent 72%
+  );
+  transform: translate(-50%,-50%);
+  animation: ldr-glow-pulse 2.8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* -- FLOATING CONTRAST SPECKS (Bottle Green & Gold) -- */
+.ldr-specks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+.ldr-speck {
+  position: absolute;
+  border-radius: 50%;
+}
+.ldr-speck:nth-child(1){ width:5px; height:5px; left:10%;  bottom:16%; background:radial-gradient(#1e6020,transparent 70%); animation:ldr-speck 3.5s ease-in infinite 0.0s; }
+.ldr-speck:nth-child(2){ width:3px; height:3px; left:28%;  bottom:10%; background:radial-gradient(#c8952a,transparent 70%); animation:ldr-speck 4.0s ease-in infinite 0.8s; }
+.ldr-speck:nth-child(3){ width:7px; height:7px; right:16%; bottom:20%; background:radial-gradient(#3d6e1f,transparent 70%); animation:ldr-speck 3.2s ease-in infinite 0.4s; }
+.ldr-speck:nth-child(4){ width:4px; height:4px; right:34%; bottom:8%;  background:radial-gradient(#c8952a,transparent 70%); animation:ldr-speck 4.5s ease-in infinite 1.2s; }
+.ldr-speck:nth-child(5){ width:6px; height:6px; left:50%;  bottom:25%; background:radial-gradient(#1e6020,transparent 70%); animation:ldr-speck 3.6s ease-in infinite 0.6s; }
+.ldr-speck:nth-child(6){ width:3px; height:3px; left:70%;  bottom:14%; background:radial-gradient(#c8952a,transparent 70%); animation:ldr-speck 3.4s ease-in infinite 1.0s; }
+.ldr-speck:nth-child(7){ width:5px; height:5px; left:84%;  bottom:28%; background:radial-gradient(#3d6e1f,transparent 70%); animation:ldr-speck 4.2s ease-in infinite 0.2s; }
+.ldr-speck:nth-child(8){ width:4px; height:4px; left:40%;  bottom:8%;  background:radial-gradient(#c8952a,transparent 70%); animation:ldr-speck 3.0s ease-in infinite 1.5s; }
+
+/* -- CORNER SPARKLES -- */
+.ldr-sparkle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+.ldr-sparkle svg { display:block; }
+.ldr-sparkle:nth-child(1){ top:12%; left:8%;    animation:ldr-sparkle 2.6s ease-in-out infinite 0.0s; }
+.ldr-sparkle:nth-child(2){ top:10%; right:10%;  animation:ldr-sparkle 3.0s ease-in-out infinite 0.8s; }
+.ldr-sparkle:nth-child(3){ bottom:13%; left:11%;  animation:ldr-sparkle 3.2s ease-in-out infinite 0.4s; }
+.ldr-sparkle:nth-child(4){ bottom:11%; right:9%;  animation:ldr-sparkle 2.8s ease-in-out infinite 1.2s; }
+
+/* -- CENTER STACK -- */
+.ldr-center {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  transition: opacity 0.5s ease-out, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* -- DUAL RING SYSTEM -- */
+.ldr-rings {
+  position: relative;
+  width: 164px;
+  height: 164px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+  animation: ldr-rise 0.4s cubic-bezier(0.22,1,0.36,1) both 0.05s;
+}
+
+/* Outer ring — clockwise Bottle Green / Gold */
+.ldr-ring-outer {
+  position: absolute;
+  inset: 0;
+  width: 164px;
+  height: 164px;
+  animation: ldr-rotate-cw 1.6s linear infinite;
+  transform-origin: 82px 82px;
+}
+.ldr-ring-outer .track {
+  fill: none;
+  stroke: rgba(14, 56, 18, 0.12);
+  stroke-width: 3.5;
+}
+.ldr-ring-outer .arc {
+  fill: none;
+  stroke: #1e6020;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-dasharray: 496;
+  stroke-dashoffset: 496;
+  animation:
+    ldr-arc       1.6s cubic-bezier(0.4,0,0.6,1) infinite,
+    ldr-arc-color 3.2s ease-in-out infinite;
+}
+
+/* Inner ring — counter-clockwise Leaf Green */
+.ldr-ring-inner {
+  position: absolute;
+  inset: 20px;
+  width: 124px;
+  height: 124px;
+  animation: ldr-rotate-ccw 2.2s linear infinite;
+  transform-origin: 62px 62px;
+}
+.ldr-ring-inner .track {
+  fill: none;
+  stroke: rgba(200, 149, 42, 0.15);
+  stroke-width: 2;
+}
+.ldr-ring-inner .arc {
+  fill: none;
+  stroke: #c8952a;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-dasharray: 371;
+  stroke-dashoffset: 371;
+  animation: ldr-arc-inner 2.2s cubic-bezier(0.4,0,0.6,1) infinite 0.3s;
+}
+
+/* Logo — with rich Bottle Green & Gold surround */
+.ldr-logo-wrap {
+  position: absolute;
+  inset: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  border: 2.5px solid #1e6020;
+  box-shadow:
+    0 0 0 5px rgba(200, 149, 42, 0.3),
+    0 0 28px rgba(14, 56, 18, 0.18),
+    0 10px 30px rgba(0, 0, 0, 0.12);
+  animation: ldr-breathe 2.0s ease-in-out infinite;
+}
+.ldr-logo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  display: block;
+}
+
+/* -- BRAND TITLE: High-Contrast Bottle Green with Gold Shimmer -- */
+.ldr-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(
+    90deg,
+    #1e6020 0%,
+    #3d6e1f 25%,
+    #c8952a 45%,
+    #1e6020 65%,
+    #122e14 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:
+    ldr-shimmer-sweep 1.8s linear infinite,
+    ldr-rise 0.4s ease both 0.15s;
+  opacity: 0;
+  animation-fill-mode: forwards, forwards;
+  filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.8));
+}
+
+/* -- SUBTITLE: High-Contrast Deep Bottle Green -- */
+.ldr-sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: #1e6020;
+  opacity: 0.95;
+  margin-bottom: 1.45rem;
+  animation: ldr-rise 0.4s ease both 0.25s;
+  animation-fill-mode: forwards;
+}
+
+/* -- PROGRESS BAR -- */
+.ldr-bar-track {
+  width: 164px;
+  height: 2.5px;
+  background: rgba(14, 56, 18, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 1.3rem;
+  animation: ldr-rise 0.4s ease both 0.3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+.ldr-bar-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #1e6020, #3d6e1f, #c8952a, #3d6e1f, #1e6020);
+  background-size: 300% 100%;
+  transform-origin: left center;
+  border-radius: 2px;
+  animation:
+    ldr-bar       1.8s cubic-bezier(0.1, 0, 0.2, 1) forwards,
+    ldr-bar-shine 1.2s linear infinite;
+}
+
+/* -- WAVE DOTS -- */
+.ldr-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  animation: ldr-rise 0.4s ease both 0.35s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.ldr-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1e6020;
+  box-shadow: 0 0 6px rgba(14, 56, 18, 0.4);
+}
+.ldr-dot:nth-child(1){ animation: ldr-wave 1.0s ease-in-out infinite 0.00s; }
+.ldr-dot:nth-child(2){ animation: ldr-wave 1.0s ease-in-out infinite 0.12s; }
+.ldr-dot:nth-child(3){ animation: ldr-wave 1.0s ease-in-out infinite 0.24s; }
+.ldr-dot:nth-child(4){ animation: ldr-wave 1.0s ease-in-out infinite 0.36s; }
+.ldr-dot:nth-child(5){ animation: ldr-wave 1.0s ease-in-out infinite 0.48s; }
+
+/* -- Mobile Phone Performance Boost -- */
+@media (max-width: 768px) {
+  /* Kill the animated background pan — biggest mobile GPU offender */
+  #page-loader {
+    animation: none !important;
+    background: #f0e9d8 !important;
+    background-size: auto !important;
+    transition: opacity 0.32s ease !important;
+    transform: none !important;
+  }
+  #page-loader.fade-out {
+    opacity: 0 !important;
+    transform: none !important;
+    transition: opacity 0.3s ease !important;
+  }
+  #page-loader.fade-out .ldr-center {
+    opacity: 0 !important;
+    transition: opacity 0.25s ease-out !important;
+    transform: none !important;
+  }
+  /* Disable heavy ambient effects on mobile */
+  .ldr-glow {
+    animation: none !important;
+    opacity: 0.4;
+  }
+  .ldr-specks,
+  .ldr-sparkle {
+    display: none !important;
+  }
+  /* Simplify logo breathe */
+  .ldr-logo-wrap {
+    animation: none !important;
+  }
+  /* Simplify shimmer on title — keep static gradient */
+  .ldr-title {
+    animation: ldr-rise 0.4s ease both 0.15s !important;
+  }
+  /* Disable the inner-ring rotation (heavy on low-end phones) */
+  .ldr-ring-inner {
+    animation: none !important;
+  }
+  /* Shorten the outer ring animation cycle */
+  .ldr-ring-outer {
+    animation-duration: 1.2s !important;
+  }
+}
+
+/* Respect user's reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  #page-loader,
+  #page-loader * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,2773 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Veg Studio — Pure Veg Café, Mira Rd</title>
+    <meta
+      name="description"
+      content="The Veg Studio — Fresh Ingredients. Pure Veg. Premium Taste. Order online from Mira Rd's,  favourite pure vegetarian café."
+    />
+    <!-- Font preconnect — crossorigin is required for gstatic fonts to load fast -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/jpeg" href="logo.jpg" />
+    <link rel="apple-touch-icon" href="logo.jpg" />
+    <meta name="theme-color" content="#2d5016" />
+
+    <!-- Preload critical images — loader logo has highest priority -->
+    <link rel="preload" as="image" href="logo.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="hero_food.webp" fetchpriority="high" />
+
+    <!-- Tailwind: defer so it doesn't block first paint -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+  </head>
+
+  <body>
+    <!-- PAGE LOADER — Premium Brand Loader -->
+    <div id="page-loader">
+
+      <!-- Ambient glow -->
+      <div class="ldr-glow"></div>
+
+      <!-- Floating specks -->
+      <div class="ldr-specks">
+        <span class="ldr-speck"></span>
+        <span class="ldr-speck"></span>
+        <span class="ldr-speck"></span>
+        <span class="ldr-speck"></span>
+        <span class="ldr-speck"></span>
+        <span class="ldr-speck"></span>
+        <span class="ldr-speck"></span>
+        <span class="ldr-speck"></span>
+      </div>
+
+      <!-- Corner sparkles -->
+      <div class="ldr-sparkle">
+        <svg width="20" height="20" viewBox="0 0 20 20">
+          <path d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z" fill="#0e3812"/>
+        </svg>
+      </div>
+      <div class="ldr-sparkle">
+        <svg width="16" height="16" viewBox="0 0 20 20">
+          <path d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z" fill="#c8952a"/>
+        </svg>
+      </div>
+      <div class="ldr-sparkle">
+        <svg width="14" height="14" viewBox="0 0 20 20">
+          <path d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z" fill="#2d5016"/>
+        </svg>
+      </div>
+      <div class="ldr-sparkle">
+        <svg width="18" height="18" viewBox="0 0 20 20">
+          <path d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z" fill="#c8952a"/>
+        </svg>
+      </div>
+
+      <!-- Center content -->
+      <div class="ldr-center">
+
+        <!-- Dual rotating rings + logo -->
+        <div class="ldr-rings">
+
+          <!-- Outer ring SVG (CW) — r=79, cx=cy=82 → circumference≈496 -->
+          <svg class="ldr-ring-outer" viewBox="0 0 164 164">
+            <circle class="track" cx="82" cy="82" r="79"/>
+            <circle class="arc"   cx="82" cy="82" r="79"/>
+          </svg>
+
+          <!-- Inner ring SVG (CCW) — r=59, cx=cy=62 → circumference≈371 -->
+          <svg class="ldr-ring-inner" viewBox="0 0 124 124">
+            <circle class="track" cx="62" cy="62" r="59"/>
+            <circle class="arc"   cx="62" cy="62" r="59"/>
+          </svg>
+
+          <!-- Logo perfectly centered -->
+          <div class="ldr-logo-wrap">
+            <img src="logo.webp" alt="The Veg Studio" decoding="async"/>
+          </div>
+
+        </div>
+
+        <!-- Brand name with gold shimmer -->
+        <div class="ldr-title">The Veg Studio</div>
+
+        <!-- Subtitle -->
+        <div class="ldr-sub">Pure&nbsp;Veg &nbsp;·&nbsp; Mira&nbsp;Road</div>
+
+        <!-- Progress bar -->
+        <div class="ldr-bar-track">
+          <div class="ldr-bar-fill"></div>
+        </div>
+
+        <!-- Wave dots -->
+        <div class="ldr-dots">
+          <span class="ldr-dot"></span>
+          <span class="ldr-dot"></span>
+          <span class="ldr-dot"></span>
+          <span class="ldr-dot"></span>
+          <span class="ldr-dot"></span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- LOGO WATERMARK -->
+    <div class="page-watermark" aria-hidden="true">
+      <img src="logo.webp" alt="The Veg Studio Watermark" loading="lazy" />
+    </div>
+
+    <!-- NAV -->
+    <nav id="mainNav">
+      <div class="nav-inner">
+        <a
+          class="nav-logo"
+          href="#"
+          onclick="event.preventDefault(); showPage('home');"
+        >
+          <div
+            class="nav-logo-emblem"
+            style="
+              overflow: hidden;
+              border-radius: 50%;
+              padding: 0;
+              background: transparent;
+              border: 2px solid var(--gold);
+            "
+          >
+            <img
+              src="logo.webp"
+              alt="The Veg Studio Logo"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+                display: block;
+              "
+            />
+          </div>
+          <div>
+            <div class="nav-logo-text">The Veg Studio</div>
+            <div class="nav-logo-sub">Pure Veg &middot; Mira Rd</div>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a
+              href="#"
+              id="nav-home"
+              onclick="event.preventDefault(); showPage('home');"
+              class="nav-active"
+              >Home</a
+            >
+          </li>
+          <li><div class="nav-sep"></div></li>
+          <li>
+            <a
+              href="#"
+              id="nav-menu"
+              onclick="event.preventDefault(); showPage('menu');"
+              >Menu</a
+            >
+          </li>
+          <li><div class="nav-sep"></div></li>
+          <li>
+            <a
+              href="#"
+              id="nav-about"
+              onclick="event.preventDefault(); showPage('about');"
+              >Our Story</a
+            >
+          </li>
+          <li><div class="nav-sep"></div></li>
+          <li>
+            <a
+              href="#"
+              id="nav-contact"
+              onclick="event.preventDefault(); showPage('contact');"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="#" class="cart-btn" onclick="event.preventDefault(); openCart();">
+              <span class="cart-btn-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="9" cy="21" r="1" />
+                  <circle cx="20" cy="21" r="1" />
+                  <path
+                    d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                  />
+                </svg>
+              </span>
+              Cart
+              <span class="cart-count" id="navCartCount">0</span>
+            </a>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============ HOME PAGE ============ -->
+    <div class="page active" id="page-home">
+      <!-- HERO: Cinematic Luxury Feast Canvas & Seamless Blend -->
+      <div class="hero">
+        <!-- Unified Seamless Ambient Backdrop -->
+        <div class="hero-canvas-bg"></div>
+
+        <!-- Right Side Feast Visual with Smooth Organic Feathered Blend (Desktop) -->
+        <div class="hero-feast-backdrop">
+          <img
+            class="hero-feast-img"
+            src="hero_food.webp"
+            alt="Signature Pure Veg Feast — The Veg Studio"
+            decoding="async"
+          />
+        </div>
+
+        <!-- Main Hero Content Overlay Grid -->
+        <div class="hero-content">
+          <!-- ── LEFT COLUMN: Editorial Typography ── -->
+          <div class="hero-left-col">
+            <!-- Botanical sketch watermark background -->
+            <svg
+              class="hero-botanical-bg"
+              viewBox="0 0 200 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 180 Q80 120 140 30 Q100 120 20 180Z"
+                stroke="#2d5016"
+                stroke-width="1.2"
+              />
+              <path
+                d="M45 155 Q95 105 165 45"
+                stroke="#2d5016"
+                stroke-width="0.8"
+              />
+              <path
+                d="M70 130 Q110 90 150 75"
+                stroke="#2d5016"
+                stroke-width="0.8"
+              />
+              <path
+                d="M95 105 Q125 75 175 60"
+                stroke="#2d5016"
+                stroke-width="0.8"
+              />
+            </svg>
+
+            <!-- Floating fresh leaf SVGs -->
+            <svg
+              class="hero-leaf-item leaf-pos-1"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10 90 Q30 10 90 10 Q70 70 10 90Z" fill="#4d7c22" />
+              <path
+                d="M20 80 Q40 20 85 15"
+                stroke="#2a4d10"
+                stroke-width="1.5"
+                fill="none"
+              />
+              <path
+                d="M30 65 Q50 35 75 30"
+                stroke="#2a4d10"
+                stroke-width="0.9"
+                fill="none"
+                opacity="0.6"
+              />
+            </svg>
+
+            <svg
+              class="hero-leaf-item leaf-pos-2"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10 90 Q30 10 90 10 Q70 70 10 90Z" fill="#588b28" />
+              <path
+                d="M20 80 Q40 20 85 15"
+                stroke="#315514"
+                stroke-width="1.5"
+                fill="none"
+              />
+            </svg>
+
+            <svg
+              class="hero-leaf-item leaf-pos-3"
+              viewBox="0 0 100 100"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10 90 Q30 10 90 10 Q70 70 10 90Z" fill="#43701d" />
+            </svg>
+
+            <!-- Scattered organic peppercorns/spices -->
+            <div
+              class="spice-crumb"
+              style="
+                width: 6px;
+                height: 6px;
+                background: #4a2b16;
+                opacity: 0.45;
+                top: 18%;
+                left: 88%;
+              "
+            ></div>
+            <div
+              class="spice-crumb"
+              style="
+                width: 4px;
+                height: 4px;
+                background: #c8952a;
+                opacity: 0.4;
+                top: 62%;
+                left: 94%;
+              "
+            ></div>
+            <div
+              class="spice-crumb"
+              style="
+                width: 5px;
+                height: 5px;
+                background: #2d5016;
+                opacity: 0.3;
+                bottom: 15%;
+                left: 65%;
+              "
+            ></div>
+            <div
+              class="spice-crumb"
+              style="
+                width: 3px;
+                height: 3px;
+                background: #6b3d1e;
+                opacity: 0.5;
+                top: 38%;
+                left: 75%;
+              "
+            ></div>
+
+            <!-- Badge -->
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              100% Pure Vegetarian &middot; Mira Rd
+            </div>
+
+            <!-- Headline -->
+            <h1 class="hero-title">
+              <span class="title-dark">Fresh.</span>
+              <span class="title-dark">Pure.</span>
+              <span class="title-gold">Delicious.</span>
+            </h1>
+
+            <!-- Tagline -->
+            <p class="hero-tagline">
+              Good food is better when it's made with care and shared with love.
+            </p>
+
+            <!-- Action CTAs -->
+            <div class="hero-ctas">
+              <button
+                class="btn-primary"
+                onclick="showPage('menu');"
+              >
+                Explore Menu
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+              <button
+                class="btn-secondary"
+                onclick="showPage('about');"
+              >
+                Our Story
+              </button>
+            </div>
+
+            <!-- Animated Scroll to Explore -->
+            <div class="hero-scroll-wrap">
+              <div class="hero-mouse-icon"></div>
+              Scroll to explore
+            </div>
+          </div>
+
+          <!-- ── RIGHT COLUMN: Interactive Feast Overlay & Floating Feature Card ── -->
+          <div class="hero-right-col">
+            <!-- Interactive Floating Feast Category Badges (Desktop) -->
+            <div class="hero-feast-tags hide-on-mobile">
+              <span class="feast-tag">🍕 Artisanal Pizza</span>
+              <span class="feast-tag">🥪 Gourmet Subs</span>
+              <span class="feast-tag">🥟 Steamed Momos</span>
+              <span class="feast-tag">🌯 Paneer Wraps</span>
+              <span class="feast-tag">🍝 Italian Pasta</span>
+              <span class="feast-tag">🥤 Choco Frappe</span>
+            </div>
+
+            <!-- Floating Frosted Glass Features Pill Card -->
+            <div class="hero-floating-features">
+              <div class="hero-feature-cell">
+                <div class="hero-feat-icon-box">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C8 6 5 10 5 14a7 7 0 0 0 14 0c0-4-3-8-7-12z"
+                    />
+                  </svg>
+                </div>
+                <div class="hero-feat-name">100% Pure Veg</div>
+                <div class="hero-feat-desc">Zero compromise on quality</div>
+              </div>
+
+              <div class="hero-feature-cell">
+                <div class="hero-feat-icon-box">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                </div>
+                <div class="hero-feat-name">Jain-Friendly Options</div>
+                <div class="hero-feat-desc">
+                  Crafted with care — Jain by choice
+                </div>
+              </div>
+
+              <div class="hero-feature-cell">
+                <div class="hero-feat-icon-box">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div class="hero-feat-name">Fresh Ingredients</div>
+                <div class="hero-feat-desc">Sourced daily, prepared fresh</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parallax Infinite Marquee Ticker Strip -->
+      <div class="features-strip" aria-label="Key Highlights">
+        <div class="marquee-container">
+          <!-- Track 1 -->
+          <div class="marquee-track">
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Fresh Ingredients
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              Hygiene Assured
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="5" />
+                <path
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                />
+              </svg>
+              Made Fresh Daily
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+              Made with Care
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"
+                />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+              100% Pure Vegetarian
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+              4.8 Rated (1,000+ Reviews)
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              Zero Preservatives
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item feat-item--jain">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2C8 6 5 10 5 14a7 7 0 0 0 14 0c0-4-3-8-7-12z" />
+                <path d="M9 12l2 2 4-4" stroke-width="2.5"/>
+              </svg>
+              Pure Jain Food Available
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+          </div>
+
+          <!-- Track 2 (Duplicate for Seamless Infinite Loop) -->
+          <div class="marquee-track" aria-hidden="true">
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Fresh Ingredients
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              Hygiene Assured
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="5" />
+                <path
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                />
+              </svg>
+              Made Fresh Daily
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+              Made with Care
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"
+                />
+                <circle cx="12" cy="9" r="2.5" />
+              </svg>
+              100% Pure Vegetarian
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+              4.8 Rated (1,000+ Reviews)
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              Zero Preservatives
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+            <div class="feat-item feat-item--jain">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2C8 6 5 10 5 14a7 7 0 0 0 14 0c0-4-3-8-7-12z" />
+                <path d="M9 12l2 2 4-4" stroke-width="2.5"/>
+              </svg>
+              Pure Jain Food Available
+            </div>
+            <span class="feat-star-sep">&#10022;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ JAIN FOOD BANNER ============ -->
+      <div class="jain-banner-section">
+        <div class="jain-banner-inner">
+          <div class="jain-banner-content">
+            <div class="jain-banner-eyebrow">
+              <span class="jain-eyebrow-sparkle">✦</span>
+              <span>Specially Crafted</span>
+              <span class="jain-eyebrow-sparkle">✦</span>
+            </div>
+            <h3 class="jain-banner-title">Pure Jain Food Available</h3>
+            <p class="jain-banner-sub">
+              Honoring authentic dietary traditions — prepared fresh with zero onion, garlic, or root vegetables.
+            </p>
+          </div>
+          <div class="jain-banner-badges">
+            <div class="jain-banner-badge">
+              <span class="jain-badge-dot"></span>
+              No Onion
+            </div>
+            <div class="jain-banner-badge">
+              <span class="jain-badge-dot"></span>
+              No Garlic
+            </div>
+            <div class="jain-banner-badge">
+              <span class="jain-badge-dot"></span>
+              No Root Veg
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Categories Section — cream background, matches page -->
+      <div class="categories-section">
+        <div style="max-width: 1200px; margin: 0 auto">
+          <!-- Section heading -->
+          <div style="text-align: center; margin-bottom: 2.5rem">
+            <!-- eyebrow label -->
+            <div
+              style="
+                display: inline-block;
+                font-family: &quot;Lato&quot;, sans-serif;
+                font-size: 0.68rem;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: #d8a846;
+                background: rgba(200, 149, 42, 0.15);
+                border: 1px solid rgba(200, 149, 42, 0.38);
+                padding: 0.28rem 1rem;
+                border-radius: 20px;
+                font-weight: 700;
+                margin-bottom: 0.85rem;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+              "
+            >
+              Curated Selections
+            </div>
+            <!-- title -->
+            <h2
+              style="
+                font-family: &quot;Playfair Display&quot;, serif;
+                font-size: clamp(1.9rem, 5vw, 3.1rem);
+                font-weight: 900;
+                color: #ffffff;
+                line-height: 1.08;
+                letter-spacing: -0.02em;
+                margin: 0 0 0.5rem;
+                text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+              "
+            >
+              Explore Our Menu
+            </h2>
+            <!-- gold ornament -->
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.6rem;
+                margin: 0.7rem 0 1rem;
+              "
+            >
+              <div
+                style="
+                  height: 1px;
+                  width: 44px;
+                  background: linear-gradient(90deg, transparent, #c8952a);
+                "
+              ></div>
+              <div
+                style="
+                  width: 5px;
+                  height: 5px;
+                  border-radius: 50%;
+                  background: #c8952a;
+                "
+              ></div>
+              <div
+                style="
+                  font-family: &quot;Lato&quot;, sans-serif;
+                  font-size: 0.58rem;
+                  letter-spacing: 0.22em;
+                  text-transform: uppercase;
+                  color: #e5b342;
+                  font-weight: 700;
+                "
+              >
+                Pure Veg
+              </div>
+              <div
+                style="
+                  width: 5px;
+                  height: 5px;
+                  border-radius: 50%;
+                  background: #c8952a;
+                "
+              ></div>
+              <div
+                style="
+                  height: 1px;
+                  width: 44px;
+                  background: linear-gradient(90deg, #c8952a, transparent);
+                "
+              ></div>
+            </div>
+            <p
+              style="
+                font-family: &quot;Lato&quot;, sans-serif;
+                font-size: 0.94rem;
+                color: rgba(245, 240, 230, 0.9);
+                max-width: 500px;
+                margin: 0 auto;
+                line-height: 1.75;
+                padding: 0 0.5rem;
+                font-weight: 500;
+                text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+              "
+            >
+              From street-style chaat to subs, salads &amp; sips — every
+              craving, crafted fresh.
+            </p>
+          </div>
+
+          <!-- Category grid -->
+          <div class="cat-grid" id="homeCatGrid"></div>
+
+          <!-- CTA banner -->
+          <div class="cat-cta-banner">
+            <div>
+              <div
+                style="
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 1.08rem;
+                  font-weight: 700;
+                  color: var(--cream);
+                  margin-bottom: 0.2rem;
+                "
+              >
+                Looking for something specific
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(240, 234, 214, 0.65)">
+                Browse all 80+ dishes with instant search &amp; filters.
+              </div>
+            </div>
+            <button
+              class="btn-gold"
+              onclick="showPage('menu');"
+              style="padding: 0.7rem 1.6rem; font-size: 0.82rem; flex-shrink: 0"
+            >
+              View Full Menu &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote -->
+      <div class="quote-strip">
+        <p class="quote-text">
+          "Pure Ingredients. Real Flavor. Made with Care."
+        </p>
+        <p class="quote-attr">— The Veg Studio</p>
+      </div>
+
+      <!-- Featured -->
+      <div class="section-wrap">
+        <h2 class="section-title">Chef's Picks</h2>
+        <p class="section-sub">Our most loved dishes, freshly made every day</p>
+        <div class="featured-grid" id="homeFeatured"></div>
+      </div>
+
+      <!-- Second quote -->
+      <div
+        style="background: var(--cream-dark); padding: 2rem; text-align: center"
+      >
+        <p
+          style="
+            font-size: 0.8rem;
+            color: var(--brown-mid);
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+          "
+        >
+          Good for you. Good for the planet. 🌿
+        </p>
+        <p style="font-size: 0.82rem; color: var(--brown-mid)">
+          Thank you for supporting fresh, sustainable &amp; pure vegetarian
+          food.
+        </p>
+      </div>
+    </div>
+
+    <!-- ============ MENU PAGE ============ -->
+    <div class="page" id="page-menu">
+      <div class="menu-hero">
+        <svg
+          class="menu-hero-bg-svg"
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M20 180 Q80 20 180 30 Q120 140 20 180Z" fill="#ffffff" />
+        </svg>
+        <svg
+          class="menu-hero-bg-svg-left"
+          viewBox="0 0 200 200"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M20 180 Q80 20 180 30 Q120 140 20 180Z" fill="#ffffff" />
+        </svg>
+
+        <div class="menu-hero-container">
+          <!-- Credibility Pill Strip -->
+          <div class="menu-credibility-pills">
+            <div class="cred-pill">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              100% Pure Vegetarian
+            </div>
+            <div class="cred-pill">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+              4.8 &#9733; Rated (1,000+ Reviews)
+            </div>
+            <div class="cred-pill">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              FSSAI Quality Certified
+            </div>
+          </div>
+
+          <div class="menu-hero-eyebrow">Fresh &amp; Wholesome</div>
+          <h1>Crafted Culinary <span>Delights</span></h1>
+          <p class="menu-hero-desc">
+            Explore Mira Rd's favourite pure vegetarian café menu. Handcrafted
+            fresh to order with zero preservatives, premium spices, and
+            uncompromised quality.
+          </p>
+
+          <!-- Jain Food Notice -->
+          <div class="menu-jain-notice">
+            <span class="menu-jain-pill-tag">✦ Jain Friendly</span>
+            <span class="menu-jain-notice-text">Pure Jain preparations available across menu categories</span>
+          </div>
+
+          <!-- Search Bar Box -->
+          <div class="menu-search-box">
+            <div class="menu-search-inner">
+              <span class="menu-search-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </span>
+              <input
+                type="text"
+                id="menuSearch"
+                placeholder="Search by dish name, ingredient, or drink..."
+                oninput="
+                  filterMenu();
+                  toggleSearchClear(this);
+                  if (typeof updateQuickTagButtons === 'function') updateQuickTagButtons(this.value);
+                "
+              />
+              <button
+                class="menu-search-clear"
+                id="menuSearchClear"
+                onclick="clearMenuSearch()"
+              >
+                &#10005;
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Filter Tags -->
+          <div class="search-quick-tags" id="searchQuickTags">
+            <span class="quick-tag-label">Popular:</span>
+            <button class="quick-tag-btn" onclick="quickSearch('Paneer', this)">
+              Paneer
+            </button>
+            <button class="quick-tag-btn" onclick="quickSearch('Cold Coffee', this)">
+              Cold Coffee
+            </button>
+            <button class="quick-tag-btn" onclick="quickSearch('Sub', this)">
+              Multigrain Sub
+            </button>
+            <button class="quick-tag-btn" onclick="quickSearch('Chaat', this)">
+              Chaat
+            </button>
+            <button class="quick-tag-btn" onclick="quickSearch('Ramen', this)">
+              Ramen
+            </button>
+            <button class="quick-tag-btn" onclick="quickSearch('Bestseller', this)">
+              Bestsellers
+            </button>
+            <button class="quick-tag-btn" onclick="quickSearch('Jain', this)">
+              Jain Options
+            </button>
+          </div>
+
+          <!-- Ornamental gold divider -->
+          <div class="menu-hero-divider">
+            <div class="menu-hero-divider-dot"></div>
+            <div class="menu-hero-divider-dot"></div>
+            <div class="menu-hero-divider-dot"></div>
+          </div>
+
+          <!-- Credibility 3 Pillars -->
+          <div class="menu-hero-features">
+            <div class="hero-feat-card">
+              <div class="hero-feat-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+                  />
+                  <circle cx="12" cy="12" r="4" fill="currentColor" />
+                </svg>
+              </div>
+              <div>
+                <div class="hero-feat-title">100% Pure Veg Kitchen</div>
+                <div class="hero-feat-sub">
+                  Zero cross-contamination. 100% pure plant-based integrity.
+                </div>
+              </div>
+            </div>
+            <div class="hero-feat-card">
+              <div class="hero-feat-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div>
+                <div class="hero-feat-title">Zero Preservatives</div>
+                <div class="hero-feat-sub">
+                  Fresh vegetables &amp; in-house sauces prepared daily.
+                </div>
+              </div>
+            </div>
+            <div class="hero-feat-card">
+              <div class="hero-feat-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <div>
+                <div class="hero-feat-title">Superfast Preparation</div>
+                <div class="hero-feat-sub">
+                  Freshly cooked &amp; delivered piping hot in 30-45 mins.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cat-pills">
+        <div class="cat-pills-inner" id="catPills"></div>
+      </div>
+      <div class="menu-main" id="menuMain"></div>
+    </div>
+
+    <!-- ============ ABOUT / OUR STORY PAGE ============ -->
+    <div class="page" id="page-about">
+      <!-- Cinematic Hero -->
+      <div class="about-hero">
+        <span class="about-hero-deco left">🌿</span>
+        <span class="about-hero-deco right">🍃</span>
+        <span class="about-hero-deco btm">✦</span>
+        <div class="about-hero-inner">
+          <div class="about-hero-pill">🌿 Our Story &amp; Philosophy</div>
+          <h1>The <em>Heart</em> Behind<br />The Kitchen</h1>
+          <p>Fresh &middot; Healthy &middot; Pure Vegetarian</p>
+        </div>
+        <!-- Scroll hint -->
+        <div class="about-hero-scroll">
+          <span>Scroll</span>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+      </div>
+
+      <div
+        class="section-wrap"
+        style="max-width: 1160px; padding: 3.5rem 1.5rem 1.5rem"
+      >
+        <!-- Founder Showcase Split Card -->
+        <div class="founder-showcase-grid">
+          <!-- Founder Stage Column -->
+          <div class="founder-stage-card">
+            <!-- Official Founder & Kitchen Studio Portrait -->
+            <img
+              src="founder_chef_studio.webp"
+              alt="Amrin Chaus - Founder & Executive Chef of The Veg Studio"
+              class="founder-photo-img"
+              loading="lazy"
+              decoding="async"
+              width="768"
+              height="1024"
+            />
+
+            <!-- Floating Credentials Badge -->
+            <div class="founder-floating-pill">
+              <div>
+                <div class="founder-floating-pill-name">Amrin Chaus</div>
+                <div class="founder-floating-pill-role">
+                  Founder &amp; Executive Chef
+                </div>
+              </div>
+              <div style="font-size: 1.3rem">🌱</div>
+            </div>
+          </div>
+
+          <!-- Founder Info Column -->
+          <div class="founder-info-col">
+            <p class="founder-tagline-script">Meet the Founder</p>
+            <h2 class="founder-name-title">Amrin Chaus</h2>
+
+            <p class="founder-intro-lead">
+              Hi, I'm the founder of <strong>THE VEG STUDIO</strong>.
+            </p>
+
+            <p class="founder-body-text">
+              Cooking is my passion. With the love of creativity and taste, I
+              started this kitchen with a simple purpose: to create fresh,
+              delicious vegetarian food made with quality ingredients, care, and
+              passion.
+            </p>
+
+            <div class="founder-quote-banner">
+              "Because good food is not just about taste &mdash; it's about how
+              it makes you feel."
+            </div>
+
+            <!-- Purpose & Mission Box -->
+            <div class="founder-purpose-box">
+              <div class="founder-purpose-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"
+                  />
+                </svg>
+              </div>
+              <div class="founder-purpose-text">
+                Serving the right dish with honest ingredients — specially
+                crafted with passion and freshly cooked to your doors.<br /><br />
+                <strong>"THE VEG STUDIO"</strong> is focused on healthy eating
+                with freshly made salad bowls, wholesome subs, and vibrant
+                appetizers.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ UNIQUE CONCEPT: CULINARY CHAPTERS JOURNEY ═══ -->
+        <div class="story-timeline-section">
+          <div class="story-section-label">
+            <span class="script-tag">The Story Unfolds</span>
+            <h2>Our Culinary Journey</h2>
+            <p>
+              From a heartfelt home kitchen to Mira Road's favourite vegetarian
+              dining experience — explore the milestones that built The Veg
+              Studio.
+            </p>
+          </div>
+
+          <!-- Progress Milestone Navigator -->
+          <div class="chapter-progress-bar">
+            <div class="chapter-step-node">
+              <div class="chapter-step-circle">🌱</div>
+              <span class="chapter-step-label">01. The Spark</span>
+            </div>
+            <div class="chapter-step-node">
+              <div class="chapter-step-circle">🍳</div>
+              <span class="chapter-step-label">02. First Flame</span>
+            </div>
+            <div class="chapter-step-node">
+              <div class="chapter-step-circle">💚</div>
+              <span class="chapter-step-label">03. Kitchen Bloom</span>
+            </div>
+            <div class="chapter-step-node">
+              <div class="chapter-step-circle">⭐</div>
+              <span class="chapter-step-label">04. 1K+ Smiles</span>
+            </div>
+          </div>
+
+          <!-- Interactive Chapter Cards Grid -->
+          <div class="chapter-journey-grid">
+            <!-- Chapter 1 -->
+            <div class="chapter-card">
+              <div>
+                <div class="chapter-header">
+                  <span class="chapter-badge-stamp"
+                    >Chapter 01 &middot; The Inception</span
+                  >
+                  <div class="chapter-icon-badge">🌱</div>
+                </div>
+                <div class="chapter-subtitle-script">
+                  Where passion met flavor
+                </div>
+                <h3 class="chapter-title-main">A Spark in the Home Kitchen</h3>
+                <p class="chapter-desc-text">
+                  Amrin Chaus began experimenting with heirloom vegetarian
+                  recipes, crafting fresh sauces from scratch, and perfecting
+                  wholesome combinations with pure, uncompromised ingredients.
+                </p>
+                <div class="chapter-chef-note">
+                  "It started with one pan, honest produce, and a vision of food
+                  that nourishes both body and soul."
+                </div>
+              </div>
+              <div class="chapter-tags-row">
+                <span class="chapter-pill-tag">✨ Home Experiments</span>
+                <span class="chapter-pill-tag">🌿 Zero Preservatives</span>
+                <span class="chapter-pill-tag">💡 Plant-Based Vision</span>
+              </div>
+            </div>
+
+            <!-- Chapter 2 -->
+            <div class="chapter-card">
+              <div>
+                <div class="chapter-header">
+                  <span class="chapter-badge-stamp"
+                    >Chapter 02 &middot; The Launch</span
+                  >
+                  <div class="chapter-icon-badge">🍳</div>
+                </div>
+                <div class="chapter-subtitle-script">
+                  From recipe book to reality
+                </div>
+                <h3 class="chapter-title-main">The Veg Studio Opens</h3>
+                <p class="chapter-desc-text">
+                  THE VEG STUDIO was officially founded. Built on a strict
+                  promise of 100% pure vegetarian integrity, cooking every order
+                  fresh from scratch without pre-cooked shortcuts.
+                </p>
+                <div class="chapter-chef-note">
+                  "We committed to never serving anything we wouldn't proudly
+                  feed our own family."
+                </div>
+              </div>
+              <div class="chapter-tags-row">
+                <span class="chapter-pill-tag">🔥 Cooked-to-Order</span>
+                <span class="chapter-pill-tag">🛵 Piping Hot Delivery</span>
+                <span class="chapter-pill-tag">🛡️ FSSAI Certified</span>
+              </div>
+            </div>
+
+            <!-- Chapter 3 -->
+            <div class="chapter-card">
+              <div>
+                <div class="chapter-header">
+                  <span class="chapter-badge-stamp"
+                    >Chapter 03 &middot; The Bloom</span
+                  >
+                  <div class="chapter-icon-badge">💚</div>
+                </div>
+                <div class="chapter-subtitle-script">
+                  When guests became family
+                </div>
+                <h3 class="chapter-title-main">Growing Roots in Mira Road</h3>
+                <p class="chapter-desc-text">
+                  Word of mouth flourished across the neighborhood. The menu
+                  expanded with gourmet salad bowls, artisan multigrain subs,
+                  crispy grilled sandwiches, and thick frappes.
+                </p>
+                <div class="chapter-chef-note">
+                  "Every returning guest and five-star smile gave our kitchen
+                  new inspiration to create."
+                </div>
+              </div>
+              <div class="chapter-tags-row">
+                <span class="chapter-pill-tag">🥗 Gourmet Salad Bowls</span>
+                <span class="chapter-pill-tag">🌯 Artisan Subs</span>
+                <span class="chapter-pill-tag">🥤 Indulgent Shakes</span>
+              </div>
+            </div>
+
+            <!-- Chapter 4 -->
+            <div class="chapter-card">
+              <div>
+                <div class="chapter-header">
+                  <span class="chapter-badge-stamp"
+                    >Chapter 04 &middot; Today &amp; Beyond</span
+                  >
+                  <div class="chapter-icon-badge">⭐</div>
+                </div>
+                <div class="chapter-subtitle-script">
+                  Crafting happiness daily
+                </div>
+                <h3 class="chapter-title-main">1,000+ Happy Foodies</h3>
+                <p class="chapter-desc-text">
+                  Today, The Veg Studio stands as Mira Road's premier
+                  destination for pure vegetarian excellence, holding a 4.8★
+                  rating while keeping every plate as heartfelt as day one.
+                </p>
+                <div class="chapter-chef-note">
+                  "Our kitchen has grown, but the love in every single dish
+                  remains pure and untouched."
+                </div>
+              </div>
+              <div class="chapter-tags-row">
+                <span class="chapter-pill-tag">⭐ 4.8★ Community Rated</span>
+                <span class="chapter-pill-tag">❤️ 1000+ Happy Guests</span>
+                <span class="chapter-pill-tag">🌱 Pure Veg Guarantee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brand Standards Grid -->
+        <div class="story-section-label">
+          <span class="script-tag">Our Kitchen Standard</span>
+          <h2>Pure Vegetarian Integrity</h2>
+        </div>
+
+        <div class="brand-promises-grid">
+          <div class="brand-promise-card">
+            <div class="brand-promise-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <div class="brand-promise-title">100% Pure Veg</div>
+            <div class="brand-promise-desc">
+              Strictly zero meat, fish, or non-veg ingredients. Pure plant-based
+              integrity from kitchen to table.
+            </div>
+          </div>
+
+          <div class="brand-promise-card">
+            <div class="brand-promise-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="5" />
+                <path
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                />
+              </svg>
+            </div>
+            <div class="brand-promise-title">Honest Ingredients</div>
+            <div class="brand-promise-desc">
+              Freshly sourced produce, authentic whole spices, and zero harmful
+              chemicals or preservatives.
+            </div>
+          </div>
+
+          <div class="brand-promise-card">
+            <div class="brand-promise-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <div class="brand-promise-title">Cooked to Order</div>
+            <div class="brand-promise-desc">
+              Every single dish is freshly prepared only when you order,
+              delivered piping hot to your doors.
+            </div>
+          </div>
+
+          <div class="brand-promise-card">
+            <div class="brand-promise-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+            </div>
+            <div class="brand-promise-title">Care &amp; Passion</div>
+            <div class="brand-promise-desc">
+              Crafted with the founder's personal recipes and love, ensuring
+              every bite brings a smile.
+            </div>
+          </div>
+        </div>
+
+        <!-- Welcome & CTA Banner -->
+        <div class="story-welcome-card">
+          <div class="story-welcome-logo">
+            <img
+              src="veg_studio_logo_hq.webp"
+              alt="The Veg Studio Official Logo"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <h2>WELCOME TO THE VEG STUDIO.</h2>
+          <p>Fresh. Healthy. Pure Vegetarian.</p>
+          <div class="story-welcome-btns">
+            <button
+              class="btn-gold"
+              onclick="showPage('menu');"
+              style="padding: 0.85rem 2rem; font-size: 0.9rem"
+            >
+              Explore Full Menu &rarr;
+            </button>
+            <button
+              class="btn-secondary"
+              onclick="showPage('contact');"
+              style="
+                padding: 0.85rem 2rem;
+                font-size: 0.9rem;
+                color: #ffffff;
+                border-color: rgba(255, 255, 255, 0.4);
+              "
+            >
+              Contact &amp; Location &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ CONTACT PAGE ============ -->
+    <div class="page" id="page-contact">
+      <div class="about-hero">
+        <div class="about-hero-pill">💬 Fast &amp; Direct Reach</div>
+        <h1>Get in Touch &amp; Connect</h1>
+        <p>
+          Direct Chat &middot; Fast Orders &middot; Official Social Channels
+        </p>
+      </div>
+
+      <div class="contact-wrap">
+        <!-- Direct Support & Quick Reach Card -->
+        <div class="contact-info-card">
+          <div>
+            <h2>Direct Support &amp; Orders</h2>
+            <div class="contact-subtitle">Fastest assistance via WhatsApp</div>
+
+            <div class="contact-details-list">
+              <!-- Phone -->
+              <div class="contact-detail-row">
+                <div class="contact-icon-pill">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label-tag">Phone &amp; Order Hotline</div>
+                  <a href="tel:9082287761" class="contact-link-val"
+                    >+91 9082287761</a
+                  >
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="contact-detail-row">
+                <div class="contact-icon-pill">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label-tag">Email Support</div>
+                  <a
+                    href="mailto:thevegstudio30@gmail.com"
+                    class="contact-link-val"
+                    >thevegstudio30@gmail.com</a
+                  >
+                </div>
+              </div>
+
+              <!-- Hours -->
+              <div class="contact-detail-row">
+                <div class="contact-icon-pill">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label-tag">Kitchen &amp; Café Hours</div>
+                  <div class="contact-link-val" style="font-size: 0.9rem">
+                    Open 24 Hours Daily (Monday – Sunday)
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct WhatsApp Button -->
+          <a
+            href="https://wa.me/919082287761?text=Hi%20The%20Veg%20Studio%2C%20I%20would%20like%20to%20place%20an%20order%20%2F%20inquire!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-wa-action-btn"
+          >
+            <svg viewBox="0 0 32 32" width="26" height="26">
+              <path
+                fill="#ffffff"
+                d="M16 2C8.28 2 2 8.28 2 16c0 2.76.79 5.34 2.18 7.53L2.24 30l6.63-1.93A13.93 13.93 0 0 0 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2z"
+              />
+              <path
+                fill="#128C7E"
+                d="M23.18 19.34c-.39-.2-2.31-1.14-2.67-1.27-.36-.13-.62-.2-.88.2-.26.39-1.01 1.27-1.24 1.53-.23.26-.46.3-.85.1-.39-.2-1.65-.61-3.15-1.94-1.16-1.04-1.95-2.32-2.18-2.71-.23-.39-.02-.6.17-.8.17-.18.39-.46.59-.69.2-.23.26-.39.39-.65.13-.26.07-.49-.03-.69s-.88-2.12-1.21-2.9c-.32-.76-.64-.66-.88-.67l-.75-.01c-.26 0-.69.1-1.05.49-.36.39-1.37 1.34-1.37 3.27s1.4 3.79 1.6 4.05c.2.26 2.76 4.22 6.69 5.91.93.4 1.66.65 2.23.83.94.3 1.8.26 2.47.16.75-.11 2.31-.95 2.64-1.86.33-.92.33-1.7.23-1.86-.1-.17-.36-.26-.75-.46z"
+              />
+            </svg>
+            <span>Chat on WhatsApp (Fastest Reply)</span>
+          </a>
+        </div>
+
+        <!-- Social Media Channels Card -->
+        <div class="contact-social-card">
+          <div>
+            <h2>Social Channels</h2>
+            <div class="contact-social-subtitle">
+              Connect with our food family
+            </div>
+
+            <!-- Social Connect Grid -->
+            <div class="social-tiles-grid">
+              <!-- WhatsApp Tile -->
+              <a
+                href="https://wa.me/919082287761"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-tile-btn"
+              >
+                <div class="social-tile-icon wa">
+                  <svg viewBox="0 0 32 32" width="24" height="24">
+                    <path
+                      fill="#ffffff"
+                      d="M16 2C8.28 2 2 8.28 2 16c0 2.76.79 5.34 2.18 7.53L2.24 30l6.63-1.93A13.93 13.93 0 0 0 16 30c7.72 0 14-6.28 14-14S23.72 2 16 2z"
+                    />
+                    <path
+                      fill="#25D366"
+                      d="M23.18 19.34c-.39-.2-2.31-1.14-2.67-1.27-.36-.13-.62-.2-.88.2-.26.39-1.01 1.27-1.24 1.53-.23.26-.46.3-.85.1-.39-.2-1.65-.61-3.15-1.94-1.16-1.04-1.95-2.32-2.18-2.71-.23-.39-.02-.6.17-.8.17-.18.39-.46.59-.69.2-.23.26-.39.39-.65.13-.26.07-.49-.03-.69s-.88-2.12-1.21-2.9c-.32-.76-.64-.66-.88-.67l-.75-.01c-.26 0-.69.1-1.05.49-.36.39-1.37 1.34-1.37 3.27s1.4 3.79 1.6 4.05c.2.26 2.76 4.22 6.69 5.91.93.4 1.66.65 2.23.83.94.3 1.8.26 2.47.16.75-.11 2.31-.95 2.64-1.86.33-.92.33-1.7.23-1.86-.1-.17-.36-.26-.75-.46z"
+                    />
+                  </svg>
+                </div>
+                <div class="social-tile-name">WhatsApp</div>
+                <div class="social-tile-handle">+91 9082287761</div>
+              </a>
+
+              <!-- Instagram Tile -->
+              <a
+                href="https://www.instagram.com/thevegstudio30"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-tile-btn"
+              >
+                <div class="social-tile-icon ig">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    />
+                  </svg>
+                </div>
+                <div class="social-tile-name">Instagram</div>
+                <div class="social-tile-handle">@thevegstudio30</div>
+              </a>
+
+              <!-- Facebook Tile -->
+              <a
+                href="https://www.facebook.com/thevegstudio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-tile-btn"
+              >
+                <div class="social-tile-icon fb">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                    />
+                  </svg>
+                </div>
+                <div class="social-tile-name">Facebook</div>
+                <div class="social-tile-handle">The Veg Studio</div>
+              </a>
+
+              <!-- Email Tile -->
+              <a href="mailto:thevegstudio30@gmail.com" class="social-tile-btn">
+                <div class="social-tile-icon mail">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    />
+                  </svg>
+                </div>
+                <div class="social-tile-name">Email Us</div>
+                <div class="social-tile-handle">thevegstudio30</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ CHECKOUT PAGE ============ -->
+    <div class="page" id="page-checkout">
+      <div class="menu-hero" style="padding: 1.5rem">
+        <h1 style="font-size: 2rem">Checkout</h1>
+        <p>Complete your details below to place your order.</p>
+      </div>
+      <div class="checkout-wrap">
+        <div>
+          <!-- Order Type Selection -->
+          <div class="form-card" style="margin-bottom: 1.5rem">
+            <h3>How would you like to receive your order?</h3>
+            <div class="order-type-grid">
+              <div
+                class="order-type-btn active"
+                id="orderTypeDelivery"
+                onclick="setOrderType('delivery')"
+              >
+                <div class="order-type-icon">🛵</div>
+                <div>
+                  <div class="order-type-title">Home Delivery</div>
+                  <div class="order-type-desc">Delivered to your doorstep</div>
+                </div>
+                <div class="order-type-radio-check"></div>
+              </div>
+              <div
+                class="order-type-btn"
+                id="orderTypeDineIn"
+                onclick="setOrderType('dinein')"
+              >
+                <div class="order-type-icon">🍽️</div>
+                <div>
+                  <div class="order-type-title">Order at Table</div>
+                  <div class="order-type-desc">Dining in the café</div>
+                </div>
+                <div class="order-type-radio-check"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer details -->
+          <div class="form-card">
+            <h3 id="custDetailsHeading">Customer Details</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  placeholder="Rahul"
+                  oninput="clearError(this)"
+                />
+                <span class="field-error" id="err-firstName"
+                  >Please enter your first name</span
+                >
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  placeholder="Sharma"
+                  oninput="clearError(this)"
+                />
+                <span class="field-error" id="err-lastName"
+                  >Please enter your last name</span
+                >
+              </div>
+              <div class="form-group form-full">
+                <label>Phone Number (10 digits) *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  maxlength="10"
+                  placeholder="9876543210"
+                  oninput="clearError(this)"
+                />
+                <span class="field-error" id="err-phone"
+                  >Please enter a valid 10-digit mobile number</span
+                >
+              </div>
+              <div class="form-group form-full">
+                <label>Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="rahul@example.com"
+                  oninput="clearError(this)"
+                />
+                <span class="field-error" id="err-email"
+                  >Please enter a valid email address</span
+                >
+              </div>
+              <!-- Table Number (Only for Order at Table) -->
+              <div
+                class="form-group form-full"
+                id="tableNumberGroup"
+                style="display: none"
+              >
+                <label>Table Number *</label>
+                <input
+                  type="text"
+                  id="tableNumber"
+                  placeholder="e.g. Table 4 or T-2"
+                  oninput="clearError(this)"
+                />
+                <span class="field-error" id="err-tableNumber"
+                  >Please enter your table number in the café</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Delivery Address -->
+          <div class="form-card" id="addressCard">
+            <h3>Delivery Address</h3>
+            <div class="form-grid">
+              <div class="form-group form-full">
+                <label>Flat / House No / Building *</label>
+                <input
+                  type="text"
+                  id="flat"
+                  placeholder="Flat 12, Wing B, Sunshine Apts"
+                  oninput="clearError(this)"
+                />
+                <span class="field-error" id="err-flat"
+                  >Please enter your flat or house number</span
+                >
+              </div>
+              <div class="form-group form-full">
+                <label>Street / Area / Locality *</label>
+                <input
+                  type="text"
+                  id="street"
+                  placeholder="FC Road, Deccan Gymkhana"
+                  oninput="clearError(this)"
+                />
+                <span class="field-error" id="err-street"
+                  >Please enter your street or locality</span
+                >
+              </div>
+              <div class="form-group">
+                <label>City *</label>
+                <input
+                  type="text"
+                  id="city"
+                  value="Mumbai"
+                  oninput="clearError(this)"
+                />
+                <span class="field-error" id="err-city"
+                  >Please enter your city</span
+                >
+              </div>
+              <div class="form-group">
+                <label>Pincode (6 digits) *</label>
+                <input
+                  type="text"
+                  id="pincode"
+                  maxlength="6"
+                  placeholder="411004"
+                  oninput="clearError(this)"
+                />
+                <span class="field-error" id="err-pincode"
+                  >Please enter a valid 6-digit pincode</span
+                >
+              </div>
+              <div class="form-group form-full">
+                <label>Landmark (Optional)</label>
+                <input
+                  type="text"
+                  id="landmark"
+                  placeholder="Near Goodluck Café"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Special instructions -->
+          <div class="form-card">
+            <h3>Special Instructions</h3>
+            <div class="form-group">
+              <label id="instructionsLabel">Cooking / Delivery Notes</label>
+              <textarea
+                id="instructions"
+                rows="3"
+                placeholder="Extra spicy, no onions, leave at front door..."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Payment -->
+          <div class="form-card">
+            <h3>Payment Method</h3>
+            <div class="radio-group" id="paymentGroup">
+              <label class="radio-option selected" style="cursor: default">
+                <input type="radio" name="paymentMethod" value="cod" checked />
+                <div>
+                  <div class="radio-label" id="payMethodLabel">Cash on Delivery</div>
+                  <div class="radio-sub" id="payMethodSub">
+                    Pay in cash when order arrives at your doorstep
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              id="payMethodNote"
+              style="
+                background: rgba(45, 80, 22, 0.07);
+                border: 1px dashed rgba(45, 80, 22, 0.25);
+                border-radius: 10px;
+                padding: 0.8rem 1rem;
+                margin-top: 0.8rem;
+                font-size: 0.8rem;
+                color: var(--green-deep);
+              "
+            >
+              Please keep exact cash ready for the delivery partner at the
+              time of delivery.
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Summary sidebar -->
+        <div>
+          <div class="order-summary-card">
+            <h3>Order Summary</h3>
+            <div id="checkoutItems"></div>
+            <div
+              style="
+                border-top: 1px solid var(--cream-dark);
+                margin: 0.8rem 0;
+                padding-top: 0.8rem;
+              "
+            >
+              <div class="summary-item">
+                <span>Subtotal</span><span id="coSubtotal">₹0</span>
+              </div>
+              <div class="summary-item">
+                <span id="coDeliveryLabel">Delivery Fee</span><span id="coDelivery">₹40</span>
+              </div>
+              <div
+                class="summary-item"
+                id="coDiscountRow"
+                style="display: none; color: var(--green-deep)"
+              >
+                <span>Discount</span><span id="coDiscount">-₹0</span>
+              </div>
+              <div class="summary-item total">
+                <span>Total Amount</span><span id="coTotal">₹0</span>
+              </div>
+            </div>
+            <div class="delivery-time" id="checkoutPrepTime">
+              Preparation &amp; fulfillment: <strong>20–35 min</strong>
+            </div>
+            <div class="coupon-row">
+              <input
+                class="coupon-input"
+                id="couponInput"
+                placeholder="Coupon code"
+              />
+              <button
+                class="btn-primary"
+                style="padding: 0.5rem 1rem; font-size: 0.8rem"
+                onclick="applyCoupon()"
+              >
+                Apply
+              </button>
+            </div>
+            <button
+              class="btn-gold"
+              style="
+                width: 100%;
+                justify-content: center;
+                font-size: 1rem;
+                margin-top: 0.8rem;
+              "
+              onclick="placeOrder()"
+            >
+              Place Order →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ORDER PLACED RECEIPT PAGE ============ -->
+    <div class="page" id="page-confirmation">
+      <div class="confirmation-wrap" style="max-width: 680px">
+        <div
+          class="confirm-icon"
+          style="background: var(--green-deep); color: var(--cream)"
+        >
+          ✓
+        </div>
+        <h2 class="confirm-title" style="color: var(--green-deep)">
+          Order Placed Successfully!
+        </h2>
+        <p class="confirm-sub">
+          Thank you for ordering with The Veg Studio. Your order has been
+          placed.
+        </p>
+
+        <!-- Clean Receipt Card -->
+        <div
+          style="
+            background: var(--white);
+            border-radius: 16px;
+            border: 1px solid var(--cream-dark);
+            padding: 1.6rem;
+            text-align: left;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+          "
+        >
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              border-bottom: 1px solid var(--cream-dark);
+              padding-bottom: 1rem;
+              margin-bottom: 1rem;
+              flex-wrap: wrap;
+              gap: 0.5rem;
+            "
+          >
+            <div>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.1em;
+                  color: var(--brown-mid);
+                  font-weight: 700;
+                "
+              >
+                Order ID
+              </div>
+              <div
+                style="
+                  font-family: &quot;Playfair Display&quot;, serif;
+                  font-size: 1.25rem;
+                  font-weight: 900;
+                  color: var(--green-deep);
+                "
+                id="receiptOrderId"
+              >
+                #TVS-2408
+              </div>
+            </div>
+            <div style="text-align: right">
+              <div
+                style="
+                  font-size: 0.75rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.1em;
+                  color: var(--brown-mid);
+                  font-weight: 700;
+                "
+              >
+                Date &amp; Time
+              </div>
+              <div
+                style="
+                  font-size: 0.85rem;
+                  font-weight: 700;
+                  color: var(--text-dark);
+                "
+                id="receiptDateTime"
+              >
+                Today
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Info -->
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 1rem;
+              padding-bottom: 1rem;
+              border-bottom: 1px dashed var(--cream-dark);
+              margin-bottom: 1rem;
+            "
+          >
+            <div>
+              <div
+                style="
+                  font-size: 0.72rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  color: var(--brown-mid);
+                  font-weight: 700;
+                  margin-bottom: 0.2rem;
+                "
+              >
+                Customer Details
+              </div>
+              <div
+                style="
+                  font-size: 0.88rem;
+                  font-weight: 700;
+                  color: var(--text-dark);
+                "
+                id="receiptCustName"
+              >
+                Rahul Sharma
+              </div>
+              <div
+                style="font-size: 0.82rem; color: var(--text-mid)"
+                id="receiptCustPhone"
+              >
+                9876543210
+              </div>
+              <div
+                style="font-size: 0.82rem; color: var(--text-mid)"
+                id="receiptCustEmail"
+              >
+                rahul@example.com
+              </div>
+            </div>
+            <div>
+              <div
+                style="
+                  font-size: 0.72rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.08em;
+                  color: var(--brown-mid);
+                  font-weight: 700;
+                  margin-bottom: 0.2rem;
+                "
+              >
+                Fulfillment &amp; Payment
+              </div>
+              <div
+                style="
+                  font-size: 0.85rem;
+                  font-weight: 700;
+                  color: var(--green-deep);
+                "
+                id="receiptType"
+              >
+                Home Delivery
+              </div>
+              <div
+                style="font-size: 0.82rem; color: var(--text-mid)"
+                id="receiptAddress"
+              >
+                Flat 12, FC Road, Pune
+              </div>
+              <div
+                style="
+                  font-size: 0.82rem;
+                  font-weight: 700;
+                  color: var(--gold);
+                  margin-top: 0.2rem;
+                "
+                id="receiptPayMethod"
+              >
+                Cash on Delivery
+              </div>
+            </div>
+          </div>
+
+          <!-- Items list -->
+          <div
+            style="
+              font-size: 0.75rem;
+              text-transform: uppercase;
+              letter-spacing: 0.08em;
+              color: var(--brown-mid);
+              font-weight: 700;
+              margin-bottom: 0.6rem;
+            "
+          >
+            Items Ordered
+          </div>
+          <div id="receiptItemsList" style="margin-bottom: 1rem"></div>
+
+          <!-- Total Calculation -->
+          <div
+            style="background: var(--cream); border-radius: 12px; padding: 1rem"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.85rem;
+                color: var(--text-mid);
+                margin-bottom: 0.3rem;
+              "
+            >
+              <span>Subtotal</span><span id="receiptSubtotal">₹0</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.85rem;
+                color: var(--text-mid);
+                margin-bottom: 0.3rem;
+              "
+            >
+              <span id="receiptDeliveryLabel">Delivery Charges</span
+              ><span id="receiptDeliveryFee">₹40</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.85rem;
+                color: var(--green-deep);
+                margin-bottom: 0.3rem;
+                display: none;
+              "
+              id="receiptDiscountRow"
+            >
+              <span>Discount</span><span id="receiptDiscount">-₹0</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.05rem;
+                font-weight: 900;
+                color: var(--green-deep);
+                border-top: 1px solid var(--cream-dark);
+                padding-top: 0.5rem;
+                margin-top: 0.5rem;
+              "
+            >
+              <span>Total Paid Amount</span
+              ><span id="receiptTotalPaid">₹0</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <button class="btn-primary" onclick="showPage('menu')">
+            Order More Dishes 🍽️
+          </button>
+          <button class="btn-secondary" onclick="showPage('home')">
+            Back to Home
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-header">
+        <h2>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Your Cart
+          </h2>
+        <button class="cart-close" onclick="closeCart()">✕</button>
+      </div>
+      <div class="cart-body" id="cartBody">
+        <div class="cart-empty">
+          <div class="cart-empty-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+          <p>Your cart is empty.<br />Add something delicious!</p>
+        </div>
+      </div>
+      <div class="cart-footer" id="cartFooter" style="display: none">
+        <div class="cart-totals">
+          <div class="cart-total-row">
+            <span>Subtotal</span><span id="cartSubtotal">₹0</span>
+          </div>
+          <div class="cart-total-row">
+            <span>Delivery fee</span><span>₹40</span>
+          </div>
+          <div class="cart-total-row grand">
+            <span>Total</span><span id="cartTotal">₹0</span>
+          </div>
+        </div>
+        <button
+          class="btn-gold"
+          style="width: 100%; justify-content: center"
+          onclick="goToCheckout()"
+        >
+          Proceed to Checkout →
+        </button>
+      </div>
+    </div>
+
+    <!-- ITEM CUSTOMISE MODAL -->
+    <div class="modal-overlay" id="itemModal">
+      <div class="modal-box">
+
+        <!-- Food image (hidden when item has no photo) -->
+        <div id="modalImgWrap" class="modal-img-wrap" style="display:none;">
+          <img id="modalImg" class="modal-img" src="" alt="" />
+        </div>
+
+        <!-- All content below image gets padding via this wrapper -->
+        <div class="modal-content">
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.8rem;
+            margin-top: 0.6rem;
+          "
+        >
+          <div>
+            <div class="modal-title" id="modalName">Item Name</div>
+            <div class="modal-price" id="modalPrice">₹0</div>
+          </div>
+          <button
+            onclick="closeModal()"
+            style="
+              background: none;
+              border: none;
+              font-size: 1.4rem;
+              cursor: pointer;
+              color: var(--brown-mid);
+              padding: 4px 6px;
+              border-radius: 6px;
+              line-height: 1;
+            "
+          >
+            ✕
+          </button>
+        </div>
+        <p
+          style="
+            font-size: 0.85rem;
+            color: var(--brown-mid);
+            margin-bottom: 0.8rem;
+          "
+          id="modalDesc"
+        ></p>
+
+        <!-- Customization Options (shown dynamically per item) -->
+        <div id="modalCustomSection" style="display: none; margin-bottom: 1rem">
+          <div class="modal-label" id="modalCustomLabel">
+            Choose Style <span class="required-badge">Required</span>
+          </div>
+          <div class="custom-options-row" id="modalCustomOptions"></div>
+          <div class="custom-opt-error" id="modalCustomError">
+            ⚠ Please select an option before adding to cart
+          </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="modal-label" id="modalQtyTitle">
+          Quantity
+        </div>
+        <div class="modal-qty-row">
+          <div class="modal-qty-label" id="modalQtySubtitle">
+            Select quantity
+          </div>
+          <div>
+            <div class="qty-pills" id="qtyPills">
+              <button
+                class="qty-pill-btn active"
+                onclick="selectQtyPill(this, 1)"
+              >
+                1
+              </button>
+              <button class="qty-pill-btn" onclick="selectQtyPill(this, 2)">
+                2
+              </button>
+              <button class="qty-pill-btn" onclick="selectQtyPill(this, 3)">
+                3
+              </button>
+              <button class="qty-pill-btn" onclick="selectQtyPill(this, 4)">
+                4
+              </button>
+              <button class="qty-pill-btn" onclick="selectQtyPill(this, 5)">
+                5
+              </button>
+              <button
+                class="qty-pill-btn"
+                onclick="selectQtyPill(this, 'custom')"
+              >
+                Custom
+              </button>
+            </div>
+            <div class="custom-qty-wrap" id="customQtyWrap">
+              <input
+                type="number"
+                class="custom-qty-input"
+                id="customQtyInput"
+                min="1"
+                max="100"
+                placeholder="Enter qty"
+                oninput="onCustomQtyInput(this)"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Extra Single Pieces (Available for Momos Only @ ₹20 / piece) -->
+        <div
+          id="modalExtraPieceSection"
+          style="
+            display: none;
+            margin-top: 1rem;
+            padding: 0.75rem 0.9rem;
+            background: rgba(200, 149, 42, 0.08);
+            border: 1.5px dashed var(--gold);
+            border-radius: 12px;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <div>
+              <div
+                style="
+                  font-size: 0.85rem;
+                  font-weight: 700;
+                  color: var(--green-deep);
+                  display: flex;
+                  align-items: center;
+                  gap: 0.4rem;
+                "
+              >
+                🥟 Add Extra Pieces
+                <span
+                  style="
+                    font-size: 0.7rem;
+                    background: var(--gold);
+                    color: var(--text-dark);
+                    padding: 0.1rem 0.4rem;
+                    border-radius: 6px;
+                    font-weight: 700;
+                  "
+                  >+₹20 / piece</span
+                >
+              </div>
+              <div
+                style="
+                  font-size: 0.73rem;
+                  color: var(--brown-mid);
+                  margin-top: 0.15rem;
+                "
+              >
+                Add extra momo pieces to your order
+              </div>
+            </div>
+            <div class="qty-ctrl" style="margin-left: 0.5rem">
+              <button
+                type="button"
+                class="qty-btn"
+                onclick="changeModalExtraPieces(-1)"
+              >
+                −
+              </button>
+              <span class="qty-num" id="modalExtraPiecesCount">0</span>
+              <button
+                type="button"
+                class="qty-btn"
+                onclick="changeModalExtraPieces(1)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div
+            id="modalExtraPieceSummary"
+            style="
+              display: none;
+              font-size: 0.75rem;
+              color: var(--green-deep);
+              font-weight: 700;
+              margin-top: 0.45rem;
+              text-align: right;
+            "
+          ></div>
+        </div>
+
+        <!-- Jain Option Choice Toggle in Modal -->
+        <div id="modalJainSection" style="display: none; margin-top: 1rem; padding: 0.75rem 0.9rem; background: rgba(14, 56, 18, 0.08); border: 1.5px solid rgba(45, 80, 22, 0.3); border-radius: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 1.3rem; display:flex; align-items:center; justify-content:center; width:28px; height:28px; background:rgba(30,94,24,0.12); border-radius:50%; flex-shrink:0;">
+                <svg viewBox="0 0 20 20" fill="none" stroke="#1e5e18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;">
+                  <path d="M10 2C7 5 5 8 5 11a5 5 0 0 0 10 0c0-3-2-6-5-9z"/>
+                  <path d="M7.5 10.5l2 2 3-3" stroke-width="2.2"/>
+                </svg>
+              </span>
+              <div>
+                <div style="font-size: 0.86rem; font-weight: 700; color: #1e3f10;">Prepare as Jain Food</div>
+                <div style="font-size: 0.73rem; color: #4a5d3f;">Made strictly without onion, garlic, or root vegetables</div>
+              </div>
+            </div>
+            <label class="jain-switch" style="position: relative; display: inline-block; width: 46px; height: 26px; margin: 0; cursor: pointer;">
+              <input type="checkbox" id="modalJainToggle" style="opacity: 0; width: 0; height: 0;" onchange="toggleModalJain(this)">
+              <span class="jain-slider" style="position: absolute; cursor: pointer; inset: 0; background-color: #ccc; transition: .3s; border-radius: 26px;"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-label" style="margin-top: 1rem">
+          Cooking Instructions (Optional)
+        </div>
+        <textarea
+          class="note-input"
+          id="modalNote"
+          rows="2"
+          placeholder="e.g. Extra spicy, no onions..."
+        ></textarea>
+        <button
+          class="btn-gold"
+          id="modalAddBtn"
+          style="width: 100%; justify-content: center; margin-top: 1.2rem"
+          onclick="confirmAddToCart()"
+        >
+          Add to Cart →
+        </button>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-box -->
+    </div><!-- /.modal-overlay -->
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <!-- STICKY CART (mobile) -->
+    <button class="sticky-cart" onclick="openCart()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span class="sticky-cart-count" id="stickyCartCount">0</span>
+    </button>
+
+    <!-- BOTTOM NAV (mobile) -->
+    <div class="bottom-nav">
+      <div class="bottom-nav-inner">
+        <button
+          class="bottom-nav-item active"
+          onclick="showPage('home');"
+        >
+          <span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </span>
+          <span>Home</span>
+        </button>
+        <button
+          class="bottom-nav-item"
+          onclick="showPage('menu');"
+        >
+          <span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 3h18v4H3z" />
+              <path d="M3 10h10v11H3z" />
+              <path d="M17 10h4v4h-4z" />
+              <path d="M17 18h4v3h-4z" />
+            </svg>
+          </span>
+          <span>Menu</span>
+        </button>
+        <button class="bottom-nav-item" onclick="openCart()">
+          <span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              />
+            </svg>
+          </span>
+          <span>Cart</span>
+        </button>
+        <button
+          class="bottom-nav-item"
+          onclick="showPage('about');"
+        >
+          <span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="16" x2="12" y2="12" />
+              <line x1="12" y1="8" x2="12.01" y2="8" />
+            </svg>
+          </span>
+          <span>About</span>
+        </button>
+        <button
+          class="bottom-nav-item"
+          onclick="showPage('contact');"
+        >
+          <span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.64a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+          </span>
+          <span>Contact</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">🌿 The Veg Studio</div>
+          <div class="footer-tagline">Pure Veg · Mira Rd</div>
+          <p class="footer-desc">
+            Fresh ingredients, pure vegetarian food, made with love in Mira Rd,
+            Maharashtra. Good food is better when it's made with care and shared
+            with love.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a onclick="showPage('home')">Home</a></li>
+            <li><a onclick="showPage('menu')">Menu</a></li>
+            <li><a onclick="showPage('about')">About Us</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a>📞 9082287761</a></li>
+            <li><a>✉️ thevegstudio30@gmail.com</a></li>
+            <li><a>📍 Mira Rd, Maharashtra</a></li>
+            <li><a>🕐 Open 24 Hours Daily</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="max-width: 1200px; margin: 0 auto">
+        <div class="footer-bottom">
+          <p>
+            © 2026 The Veg Studio. All rights reserved. | Made with ❤️ in Mira
+            Rd
+          </p>
+          <p>🌿 Fresh Ingredients · Pure Veg · Premium Taste</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script src="js/data/menuData.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
