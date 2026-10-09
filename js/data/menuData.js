@@ -203,7 +203,7 @@ const menuData = {
       {
         name: "Creamy Garlic Pasta",
         desc: "Roasted garlic cream sauce with perfectly cooked pasta",
-        price: 149
+        price: 149,
         badge: "bestseller",
         image: "assets/images/menu/pasta/creamy-garlic-pasta.webp",
       },
@@ -239,7 +239,7 @@ const menuData = {
         badge: "",
         image: "assets/images/menu/salad-bowls/rainbow veg salad.webp",
       },
-  
+
       {
         name: "Green Detox Bowl",
         desc: "A cleansing bowl of greens, seeds and nourishing ingredients",
@@ -254,7 +254,7 @@ const menuData = {
         badge: "",
         image: "assets/images/menu/salad-bowls/chickpea-crunch-salad.webp",
       },
- 
+
       {
         name: "Paneer Protein Salad Bowl",
         desc: "High-protein bowl packed with paneer, legumes and greens",
@@ -734,8 +734,6 @@ const menuData = {
         badge: "",
         image: "assets/images/menu/nuggets/cheesy nugget.webp",
       },
-      
-      
     ],
   },
   "Garlic Bread": {
@@ -1155,14 +1153,14 @@ const menuData = {
       {
         name: "Churros",
         desc: "Golden fried churros dusted with cinnamon sugar",
-        price: 150,
+        price: 159,
         badge: "",
         image: "assets/images/menu/studio-special/churros.webp",
       },
       {
         name: "Magnum Croissant",
         desc: "Premium croissant with Magnum-style chocolate coating",
-        price: 240,
+        price: 260,
         badge: "new",
         image: "assets/images/menu/studio-special/magnum croissant.webp",
       },
