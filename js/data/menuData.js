@@ -80,26 +80,13 @@ const menuData = {
         badge: "",
         image: "assets/images/menu/chaat/veg-masala-corn-chat.webp",
       },
-      {
-        name: "Greek Salad",
-        desc: "Crisp cucumber, tomatoes, olives, feta-style paneer and herbs",
-        price: 150,
-        badge: "",
-        image: "assets/images/menu/salad-bowls/greek salad.webp",
-      },
+
       {
         name: "Falafel with Hummus",
         desc: "Golden falafel balls served with creamy hummus dip",
         price: 180,
         badge: "new",
         image: "assets/images/menu/chaat/falafel-with-hummus.webp",
-      },
-      {
-        name: "Avocado Salad",
-        desc: "Ripe avocado with fresh veggies, lime and herbs",
-        price: 230,
-        badge: "new",
-        image: "assets/images/menu/chaat/avocado-salad.webp",
       },
     ],
   },
@@ -114,7 +101,7 @@ const menuData = {
         desc: "Classic club sandwich with fresh garden veggies",
         price: 60,
         badge: "",
-        image: "assets/images/menu/sandwiches/vegetable club.webp",
+        image: "assets/images/menu/sandwiches/club sandwich.png",
       },
       {
         name: "Vegetable Grilled",
@@ -233,13 +220,26 @@ const menuData = {
         image: "assets/images/menu/salad-bowls/classic veggies salad.webp",
       },
       {
+        name: "Corn Chat Salad",
+        desc: "Fresh corn chat with veggies",
+        price: 160,
+        badge: "",
+        image: "assets/images/menu/salad-bowls/corn chat salad.png",
+      },
+      {
         name: "Rainbow Veg Salad",
         desc: "A colourful mix of vibrant veggies for a nutritious bowl",
         price: 160,
         badge: "",
         image: "assets/images/menu/salad-bowls/rainbow veg salad.webp",
       },
-
+      {
+        name: "Avocado Salad",
+        desc: "Ripe avocado with fresh veggies, lime and herbs",
+        price: 230,
+        badge: "new",
+        image: "assets/images/menu/salad-bowls/avacado salad.png",
+      },
       {
         name: "Green Detox Bowl",
         desc: "A cleansing bowl of greens, seeds and nourishing ingredients",
@@ -443,7 +443,7 @@ const menuData = {
         },
       },
       {
-        name: "Bucky Wrap",
+        name: "Studio Special Bucky Wrap",
         isJain: true,
         desc: "Our loaded signature wrap — a Studio favourite",
         price: 165,
@@ -641,7 +641,7 @@ const menuData = {
         customizationOptions: {
           label: "Momo Style",
           required: true,
-          choices: ["Steamed", "Grilled"],
+          choices: ["Steamed", "Fried"],
         },
       },
       {
@@ -711,28 +711,44 @@ const menuData = {
     jainNote: "Jain option available — Except Chipotle Garlic Nuggets",
     items: [
       {
-        name: "Classic Veg Nuggets",
+        name: "Chilli Potato Garlic Shots",
         isJain: true,
-        desc: "Crispy golden nuggets with seasoned coating — a crowd favourite",
+        desc: "Chilli Potato Garlic Shots with seasoned coating — a crowd favourite",
         price: 110,
         badge: "bestseller",
-        image: "assets/images/menu/nuggets/classic veg nuggets.webp",
+        image: "assets/images/menu/nuggets/chilli garlic potato shots.png",
       },
       {
-        name: "Peri Peri Nuggets",
+        name: "Paneer Nuggets",
         isJain: true,
-        desc: "Spicy peri peri coated crispy veg nuggets",
+        desc: "Paneer nuggets with seasoned coating — a crowd favourite",
+        price: 160,
+        badge: "bestseller",
+        image: "assets/images/menu/nuggets/paneer nuggets.png",
+      },
+      {
+        name: "Cheese Balls",
+        isJain: true,
+        desc: "Golden cheese balls with a melted cheese dip",
         price: 120,
         badge: "",
-        image: "assets/images/menu/nuggets/peri peri nuggets.webp",
+        image: "assets/images/menu/nuggets/cheese balls.png",
       },
       {
-        name: "Cheesy Nuggets",
+        name: "Cheese Corn Nugget",
         isJain: true,
-        desc: "Golden nuggets with a melted cheese dip",
-        price: 130,
+        desc: "Golden cheese corn nuggets with a melted cheese dip",
+        price: 120,
         badge: "",
-        image: "assets/images/menu/nuggets/cheesy nugget.webp",
+        image: "assets/images/menu/nuggets/cheese corn nugget.png",
+      },
+      {
+        name: "Spring Roll",
+        isJain: true,
+        desc: "Veg spring roll with fresh veggies",
+        price: 150,
+        badge: "",
+        image: "assets/images/menu/nuggets/spring roll.png",
       },
     ],
   },
@@ -1006,6 +1022,13 @@ const menuData = {
         image: "assets/images/menu/hot-beverages/black-coffee.webp",
       },
       {
+        name: "Pineapple Lemon Tea",
+        desc: "Refreshing  tea with pineapple and lemon",
+        price: 45,
+        badge: "",
+        image: "assets/images/menu/hot-beverages/pineapple lemon tea.png",
+      },
+      {
         name: "Blue Tea",
         desc: "Butterfly pea flower herbal tea",
         price: 60,
@@ -1029,7 +1052,7 @@ const menuData = {
     ],
   },
   "Cold Coffee": {
-    emoji: "🧋",
+    emoji: "",
     items: [
       {
         name: "Cold Brew",
@@ -1051,6 +1074,13 @@ const menuData = {
         price: 99,
         badge: "bestseller",
         image: "assets/images/menu/cold-coffee/classic-cold-coffee.webp",
+      },
+      {
+        name: "Affogato",
+        desc: "Our signature coffee blend",
+        price: 99,
+        badge: "bestseller",
+        image: "assets/images/menu/cold-coffee/affogato.png",
       },
       {
         name: "Chocolate Cold Coffee",
@@ -1153,14 +1183,14 @@ const menuData = {
       {
         name: "Churros",
         desc: "Golden fried churros dusted with cinnamon sugar",
-        price: 159,
+        price: 150,
         badge: "",
         image: "assets/images/menu/studio-special/churros.webp",
       },
       {
         name: "Magnum Croissant",
         desc: "Premium croissant with Magnum-style chocolate coating",
-        price: 260,
+        price: 240,
         badge: "new",
         image: "assets/images/menu/studio-special/magnum croissant.webp",
       },

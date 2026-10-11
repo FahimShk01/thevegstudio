@@ -35,7 +35,6 @@
   <body>
     <!-- PAGE LOADER — Premium Brand Loader -->
     <div id="page-loader">
-
       <!-- Ambient glow -->
       <div class="ldr-glow"></div>
 
@@ -54,48 +53,57 @@
       <!-- Corner sparkles -->
       <div class="ldr-sparkle">
         <svg width="20" height="20" viewBox="0 0 20 20">
-          <path d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z" fill="#0e3812"/>
+          <path
+            d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z"
+            fill="#0e3812"
+          />
         </svg>
       </div>
       <div class="ldr-sparkle">
         <svg width="16" height="16" viewBox="0 0 20 20">
-          <path d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z" fill="#c8952a"/>
+          <path
+            d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z"
+            fill="#c8952a"
+          />
         </svg>
       </div>
       <div class="ldr-sparkle">
         <svg width="14" height="14" viewBox="0 0 20 20">
-          <path d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z" fill="#2d5016"/>
+          <path
+            d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z"
+            fill="#2d5016"
+          />
         </svg>
       </div>
       <div class="ldr-sparkle">
         <svg width="18" height="18" viewBox="0 0 20 20">
-          <path d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z" fill="#c8952a"/>
+          <path
+            d="M10 1 L11.2 8.8 L19 10 L11.2 11.2 L10 19 L8.8 11.2 L1 10 L8.8 8.8 Z"
+            fill="#c8952a"
+          />
         </svg>
       </div>
 
       <!-- Center content -->
       <div class="ldr-center">
-
         <!-- Dual rotating rings + logo -->
         <div class="ldr-rings">
-
           <!-- Outer ring SVG (CW) — r=79, cx=cy=82 → circumference≈496 -->
           <svg class="ldr-ring-outer" viewBox="0 0 164 164">
-            <circle class="track" cx="82" cy="82" r="79"/>
-            <circle class="arc"   cx="82" cy="82" r="79"/>
+            <circle class="track" cx="82" cy="82" r="79" />
+            <circle class="arc" cx="82" cy="82" r="79" />
           </svg>
 
           <!-- Inner ring SVG (CCW) — r=59, cx=cy=62 → circumference≈371 -->
           <svg class="ldr-ring-inner" viewBox="0 0 124 124">
-            <circle class="track" cx="62" cy="62" r="59"/>
-            <circle class="arc"   cx="62" cy="62" r="59"/>
+            <circle class="track" cx="62" cy="62" r="59" />
+            <circle class="arc" cx="62" cy="62" r="59" />
           </svg>
 
           <!-- Logo perfectly centered -->
           <div class="ldr-logo-wrap">
-            <img src="logo.webp" alt="The Veg Studio" decoding="async"/>
+            <img src="logo.webp" alt="The Veg Studio" decoding="async" />
           </div>
-
         </div>
 
         <!-- Brand name with gold shimmer -->
@@ -117,9 +125,7 @@
           <span class="ldr-dot"></span>
           <span class="ldr-dot"></span>
         </div>
-
       </div>
-
     </div>
 
     <!-- LOGO WATERMARK -->
@@ -133,18 +139,12 @@
         <a
           class="nav-logo"
           href="#"
-          onclick="event.preventDefault(); showPage('home');"
+          onclick="
+            event.preventDefault();
+            showPage('home');
+          "
         >
-          <div
-            class="nav-logo-emblem"
-            style="
-              overflow: hidden;
-              border-radius: 50%;
-              padding: 0;
-              background: transparent;
-              border: 2px solid var(--gold);
-            "
-          >
+          <div class="nav-logo-emblem">
             <img
               src="logo.webp"
               alt="The Veg Studio Logo"
@@ -168,7 +168,10 @@
             <a
               href="#"
               id="nav-home"
-              onclick="event.preventDefault(); showPage('home');"
+              onclick="
+                event.preventDefault();
+                showPage('home');
+              "
               class="nav-active"
               >Home</a
             >
@@ -178,7 +181,10 @@
             <a
               href="#"
               id="nav-menu"
-              onclick="event.preventDefault(); showPage('menu');"
+              onclick="
+                event.preventDefault();
+                showPage('menu');
+              "
               >Menu</a
             >
           </li>
@@ -187,7 +193,10 @@
             <a
               href="#"
               id="nav-about"
-              onclick="event.preventDefault(); showPage('about');"
+              onclick="
+                event.preventDefault();
+                showPage('about');
+              "
               >Our Story</a
             >
           </li>
@@ -196,12 +205,22 @@
             <a
               href="#"
               id="nav-contact"
-              onclick="event.preventDefault(); showPage('contact');"
+              onclick="
+                event.preventDefault();
+                showPage('contact');
+              "
               >Contact</a
             >
           </li>
           <li>
-            <a href="#" class="cart-btn" onclick="event.preventDefault(); openCart();">
+            <a
+              href="#"
+              class="cart-btn"
+              onclick="
+                event.preventDefault();
+                openCart();
+              "
+            >
               <span class="cart-btn-icon">
                 <svg
                   viewBox="0 0 24 24"
@@ -392,10 +411,7 @@
 
             <!-- Action CTAs -->
             <div class="hero-ctas">
-              <button
-                class="btn-primary"
-                onclick="showPage('menu');"
-              >
+              <button class="btn-primary" onclick="showPage('menu')">
                 Explore Menu
                 <svg
                   width="15"
@@ -411,10 +427,7 @@
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
               </button>
-              <button
-                class="btn-secondary"
-                onclick="showPage('about');"
-              >
+              <button class="btn-secondary" onclick="showPage('about')">
                 Our Story
               </button>
             </div>
@@ -605,7 +618,7 @@
                 stroke-linejoin="round"
               >
                 <path d="M12 2C8 6 5 10 5 14a7 7 0 0 0 14 0c0-4-3-8-7-12z" />
-                <path d="M9 12l2 2 4-4" stroke-width="2.5"/>
+                <path d="M9 12l2 2 4-4" stroke-width="2.5" />
               </svg>
               Pure Jain Food Available
             </div>
@@ -734,7 +747,7 @@
                 stroke-linejoin="round"
               >
                 <path d="M12 2C8 6 5 10 5 14a7 7 0 0 0 14 0c0-4-3-8-7-12z" />
-                <path d="M9 12l2 2 4-4" stroke-width="2.5"/>
+                <path d="M9 12l2 2 4-4" stroke-width="2.5" />
               </svg>
               Pure Jain Food Available
             </div>
@@ -754,7 +767,8 @@
             </div>
             <h3 class="jain-banner-title">Pure Jain Food Available</h3>
             <p class="jain-banner-sub">
-              Honoring authentic dietary traditions — prepared fresh with zero onion, garlic, or root vegetables.
+              Honoring authentic dietary traditions — prepared fresh with zero
+              onion, garlic, or root vegetables.
             </p>
           </div>
           <div class="jain-banner-badges">
@@ -773,7 +787,6 @@
           </div>
         </div>
       </div>
-
 
       <!-- Categories Section — cream background, matches page -->
       <div class="categories-section">
@@ -909,7 +922,7 @@
             </div>
             <button
               class="btn-gold"
-              onclick="showPage('menu');"
+              onclick="showPage('menu')"
               style="padding: 0.7rem 1.6rem; font-size: 0.82rem; flex-shrink: 0"
             >
               View Full Menu &rarr;
@@ -1034,7 +1047,9 @@
           <!-- Jain Food Notice -->
           <div class="menu-jain-notice">
             <span class="menu-jain-pill-tag">✦ Jain Friendly</span>
-            <span class="menu-jain-notice-text">Pure Jain preparations available across menu categories</span>
+            <span class="menu-jain-notice-text"
+              >Pure Jain preparations available across menu categories</span
+            >
           </div>
 
           <!-- Search Bar Box -->
@@ -1060,7 +1075,8 @@
                 oninput="
                   filterMenu();
                   toggleSearchClear(this);
-                  if (typeof updateQuickTagButtons === 'function') updateQuickTagButtons(this.value);
+                  if (typeof updateQuickTagButtons === 'function')
+                    updateQuickTagButtons(this.value);
                 "
               />
               <button
@@ -1079,7 +1095,10 @@
             <button class="quick-tag-btn" onclick="quickSearch('Paneer', this)">
               Paneer
             </button>
-            <button class="quick-tag-btn" onclick="quickSearch('Cold Coffee', this)">
+            <button
+              class="quick-tag-btn"
+              onclick="quickSearch('Cold Coffee', this)"
+            >
               Cold Coffee
             </button>
             <button class="quick-tag-btn" onclick="quickSearch('Sub', this)">
@@ -1091,7 +1110,10 @@
             <button class="quick-tag-btn" onclick="quickSearch('Ramen', this)">
               Ramen
             </button>
-            <button class="quick-tag-btn" onclick="quickSearch('Bestseller', this)">
+            <button
+              class="quick-tag-btn"
+              onclick="quickSearch('Bestseller', this)"
+            >
               Bestsellers
             </button>
             <button class="quick-tag-btn" onclick="quickSearch('Jain', this)">
@@ -1544,14 +1566,14 @@
           <div class="story-welcome-btns">
             <button
               class="btn-gold"
-              onclick="showPage('menu');"
+              onclick="showPage('menu')"
               style="padding: 0.85rem 2rem; font-size: 0.9rem"
             >
               Explore Full Menu &rarr;
             </button>
             <button
               class="btn-secondary"
-              onclick="showPage('contact');"
+              onclick="showPage('contact')"
               style="
                 padding: 0.85rem 2rem;
                 font-size: 0.9rem;
@@ -1766,6 +1788,123 @@
           </div>
         </div>
       </div>
+
+      <!-- ── LOCATION MAP CARD ── -->
+      <div class="contact-map-section">
+        <div class="contact-map-card">
+          <!-- Header -->
+          <div class="contact-map-header">
+            <div class="contact-map-badge">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="14"
+                height="14"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Find Us
+            </div>
+            <h2 class="contact-map-title">Visit Our Café</h2>
+            <p class="contact-map-subtitle">
+              Come dine with us — we'd love to have you!
+            </p>
+          </div>
+
+          <!-- Live Google Maps iframe (always visible, loads on contact page open) -->
+          <div class="contact-map-embed-wrap">
+            <iframe
+              class="contact-map-iframe"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.3!2d72.8543!3d19.2807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1547638a779%3A0x7cffd63e4efed78f!2sOstwal%20Heights%2C%20Kanakia%20Rd%2C%20Beverly%20Park%2C%20Mira%20Road%20East%2C%20Mira%20Bhayandar%2C%20Maharashtra%20401107!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="The Veg Studio - Ostwal Heights, Mira Road"
+            ></iframe>
+
+            <!-- Overlay: tapping opens Google Maps directions -->
+            <a
+              href="https://maps.google.com/?q=Ostwal+Heights,+Kanakia+Rd,+Beverly+Park,+Mira+Road+East,+Maharashtra+401107"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-map-overlay"
+              aria-label="Open in Google Maps for directions"
+            >
+              <div class="contact-map-overlay-pill">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="16"
+                  height="16"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Tap map to get directions
+              </div>
+            </a>
+          </div>
+
+          <!-- Address + Directions button -->
+          <div class="contact-map-details">
+            <div class="contact-map-addr-block">
+              <div class="contact-map-addr-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <div class="contact-map-addr-label">Our Address</div>
+                <div class="contact-map-addr-val">
+                  Building No‑2, Ostwal Heights, Shop No 7,<br />
+                  Kanakia Rd, Beverly Park,<br />
+                  Mira Road East, Maharashtra 401107
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Ostwal+Heights+Shop+No+7+Kanakia+Rd+Beverly+Park+Mira+Road+East+Maharashtra+401107&travelmode=driving"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-map-dir-btn"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                width="18"
+                height="18"
+              >
+                <polygon points="3 11 22 2 13 21 11 13 3 11" />
+              </svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ============ CHECKOUT PAGE ============ -->
@@ -1964,7 +2103,9 @@
               <label class="radio-option selected" style="cursor: default">
                 <input type="radio" name="paymentMethod" value="cod" checked />
                 <div>
-                  <div class="radio-label" id="payMethodLabel">Cash on Delivery</div>
+                  <div class="radio-label" id="payMethodLabel">
+                    Cash on Delivery
+                  </div>
                   <div class="radio-sub" id="payMethodSub">
                     Pay in cash when order arrives at your doorstep
                   </div>
@@ -1983,8 +2124,8 @@
                 color: var(--green-deep);
               "
             >
-              Please keep exact cash ready for the delivery partner at the
-              time of delivery.
+              Please keep exact cash ready for the delivery partner at the time
+              of delivery.
             </div>
           </div>
         </div>
@@ -2005,7 +2146,8 @@
                 <span>Subtotal</span><span id="coSubtotal">₹0</span>
               </div>
               <div class="summary-item">
-                <span id="coDeliveryLabel">Delivery Fee</span><span id="coDelivery">₹40</span>
+                <span id="coDeliveryLabel">Delivery Fee</span
+                ><span id="coDelivery">₹40</span>
               </div>
               <div
                 class="summary-item"
@@ -2328,16 +2470,49 @@
     <div class="cart-drawer" id="cartDrawer">
       <div class="cart-header">
         <h2>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            Your Cart
-          </h2>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              vertical-align: middle;
+              margin-right: 6px;
+            "
+          >
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path
+              d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+            />
+          </svg>
+          Your Cart
+        </h2>
         <button class="cart-close" onclick="closeCart()">✕</button>
       </div>
       <div class="cart-body" id="cartBody">
         <div class="cart-empty">
           <div class="cart-empty-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-            </div>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              />
+            </svg>
+          </div>
           <p>Your cart is empty.<br />Add something delicious!</p>
         </div>
       </div>
@@ -2366,256 +2541,336 @@
     <!-- ITEM CUSTOMISE MODAL -->
     <div class="modal-overlay" id="itemModal">
       <div class="modal-box">
-
         <!-- Food image (hidden when item has no photo) -->
-        <div id="modalImgWrap" class="modal-img-wrap" style="display:none;">
+        <div id="modalImgWrap" class="modal-img-wrap" style="display: none">
           <img id="modalImg" class="modal-img" src="" alt="" />
         </div>
 
         <!-- All content below image gets padding via this wrapper -->
         <div class="modal-content">
-
-        <div
-          style="
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.8rem;
-            margin-top: 0.6rem;
-          "
-        >
-          <div>
-            <div class="modal-title" id="modalName">Item Name</div>
-            <div class="modal-price" id="modalPrice">₹0</div>
-          </div>
-          <button
-            onclick="closeModal()"
-            style="
-              background: none;
-              border: none;
-              font-size: 1.4rem;
-              cursor: pointer;
-              color: var(--brown-mid);
-              padding: 4px 6px;
-              border-radius: 6px;
-              line-height: 1;
-            "
-          >
-            ✕
-          </button>
-        </div>
-        <p
-          style="
-            font-size: 0.85rem;
-            color: var(--brown-mid);
-            margin-bottom: 0.8rem;
-          "
-          id="modalDesc"
-        ></p>
-
-        <!-- Customization Options (shown dynamically per item) -->
-        <div id="modalCustomSection" style="display: none; margin-bottom: 1rem">
-          <div class="modal-label" id="modalCustomLabel">
-            Choose Style <span class="required-badge">Required</span>
-          </div>
-          <div class="custom-options-row" id="modalCustomOptions"></div>
-          <div class="custom-opt-error" id="modalCustomError">
-            ⚠ Please select an option before adding to cart
-          </div>
-        </div>
-
-        <!-- Quantity -->
-        <div class="modal-label" id="modalQtyTitle">
-          Quantity
-        </div>
-        <div class="modal-qty-row">
-          <div class="modal-qty-label" id="modalQtySubtitle">
-            Select quantity
-          </div>
-          <div>
-            <div class="qty-pills" id="qtyPills">
-              <button
-                class="qty-pill-btn active"
-                onclick="selectQtyPill(this, 1)"
-              >
-                1
-              </button>
-              <button class="qty-pill-btn" onclick="selectQtyPill(this, 2)">
-                2
-              </button>
-              <button class="qty-pill-btn" onclick="selectQtyPill(this, 3)">
-                3
-              </button>
-              <button class="qty-pill-btn" onclick="selectQtyPill(this, 4)">
-                4
-              </button>
-              <button class="qty-pill-btn" onclick="selectQtyPill(this, 5)">
-                5
-              </button>
-              <button
-                class="qty-pill-btn"
-                onclick="selectQtyPill(this, 'custom')"
-              >
-                Custom
-              </button>
-            </div>
-            <div class="custom-qty-wrap" id="customQtyWrap">
-              <input
-                type="number"
-                class="custom-qty-input"
-                id="customQtyInput"
-                min="1"
-                max="100"
-                placeholder="Enter qty"
-                oninput="onCustomQtyInput(this)"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- Extra Single Pieces (Available for Momos Only @ ₹20 / piece) -->
-        <div
-          id="modalExtraPieceSection"
-          style="
-            display: none;
-            margin-top: 1rem;
-            padding: 0.75rem 0.9rem;
-            background: rgba(200, 149, 42, 0.08);
-            border: 1.5px dashed var(--gold);
-            border-radius: 12px;
-          "
-        >
           <div
             style="
               display: flex;
               justify-content: space-between;
-              align-items: center;
+              align-items: flex-start;
+              margin-bottom: 0.8rem;
+              margin-top: 0.6rem;
             "
           >
             <div>
-              <div
-                style="
-                  font-size: 0.85rem;
-                  font-weight: 700;
-                  color: var(--green-deep);
-                  display: flex;
-                  align-items: center;
-                  gap: 0.4rem;
-                "
-              >
-                🥟 Add Extra Pieces
-                <span
-                  style="
-                    font-size: 0.7rem;
-                    background: var(--gold);
-                    color: var(--text-dark);
-                    padding: 0.1rem 0.4rem;
-                    border-radius: 6px;
-                    font-weight: 700;
-                  "
-                  >+₹20 / piece</span
-                >
-              </div>
-              <div
-                style="
-                  font-size: 0.73rem;
-                  color: var(--brown-mid);
-                  margin-top: 0.15rem;
-                "
-              >
-                Add extra momo pieces to your order
-              </div>
+              <div class="modal-title" id="modalName">Item Name</div>
+              <div class="modal-price" id="modalPrice">₹0</div>
             </div>
-            <div class="qty-ctrl" style="margin-left: 0.5rem">
-              <button
-                type="button"
-                class="qty-btn"
-                onclick="changeModalExtraPieces(-1)"
-              >
-                −
-              </button>
-              <span class="qty-num" id="modalExtraPiecesCount">0</span>
-              <button
-                type="button"
-                class="qty-btn"
-                onclick="changeModalExtraPieces(1)"
-              >
-                +
-              </button>
+            <button
+              onclick="closeModal()"
+              style="
+                background: none;
+                border: none;
+                font-size: 1.4rem;
+                cursor: pointer;
+                color: var(--brown-mid);
+                padding: 4px 6px;
+                border-radius: 6px;
+                line-height: 1;
+              "
+            >
+              ✕
+            </button>
+          </div>
+          <p
+            style="
+              font-size: 0.85rem;
+              color: var(--brown-mid);
+              margin-bottom: 0.8rem;
+            "
+            id="modalDesc"
+          ></p>
+
+          <!-- Customization Options (shown dynamically per item) -->
+          <div
+            id="modalCustomSection"
+            style="display: none; margin-bottom: 1rem"
+          >
+            <div class="modal-label" id="modalCustomLabel">
+              Choose Style <span class="required-badge">Required</span>
+            </div>
+            <div class="custom-options-row" id="modalCustomOptions"></div>
+            <div class="custom-opt-error" id="modalCustomError">
+              ⚠ Please select an option before adding to cart
             </div>
           </div>
+
+          <!-- Quantity -->
+          <div class="modal-label" id="modalQtyTitle">Quantity</div>
+          <div class="modal-qty-row">
+            <div class="modal-qty-label" id="modalQtySubtitle">
+              Select quantity
+            </div>
+            <div>
+              <div class="qty-pills" id="qtyPills">
+                <button
+                  class="qty-pill-btn active"
+                  onclick="selectQtyPill(this, 1)"
+                >
+                  1
+                </button>
+                <button class="qty-pill-btn" onclick="selectQtyPill(this, 2)">
+                  2
+                </button>
+                <button class="qty-pill-btn" onclick="selectQtyPill(this, 3)">
+                  3
+                </button>
+                <button class="qty-pill-btn" onclick="selectQtyPill(this, 4)">
+                  4
+                </button>
+                <button class="qty-pill-btn" onclick="selectQtyPill(this, 5)">
+                  5
+                </button>
+                <button
+                  class="qty-pill-btn"
+                  onclick="selectQtyPill(this, 'custom')"
+                >
+                  Custom
+                </button>
+              </div>
+              <div class="custom-qty-wrap" id="customQtyWrap">
+                <input
+                  type="number"
+                  class="custom-qty-input"
+                  id="customQtyInput"
+                  min="1"
+                  max="100"
+                  placeholder="Enter qty"
+                  oninput="onCustomQtyInput(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Extra Single Pieces (Available for Momos Only @ ₹20 / piece) -->
           <div
-            id="modalExtraPieceSummary"
+            id="modalExtraPieceSection"
             style="
               display: none;
-              font-size: 0.75rem;
-              color: var(--green-deep);
-              font-weight: 700;
-              margin-top: 0.45rem;
-              text-align: right;
+              margin-top: 1rem;
+              padding: 0.75rem 0.9rem;
+              background: rgba(200, 149, 42, 0.08);
+              border: 1.5px dashed var(--gold);
+              border-radius: 12px;
             "
-          ></div>
-        </div>
-
-        <!-- Jain Option Choice Toggle in Modal -->
-        <div id="modalJainSection" style="display: none; margin-top: 1rem; padding: 0.75rem 0.9rem; background: rgba(14, 56, 18, 0.08); border: 1.5px solid rgba(45, 80, 22, 0.3); border-radius: 12px;">
-          <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              <span style="font-size: 1.3rem; display:flex; align-items:center; justify-content:center; width:28px; height:28px; background:rgba(30,94,24,0.12); border-radius:50%; flex-shrink:0;">
-                <svg viewBox="0 0 20 20" fill="none" stroke="#1e5e18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;">
-                  <path d="M10 2C7 5 5 8 5 11a5 5 0 0 0 10 0c0-3-2-6-5-9z"/>
-                  <path d="M7.5 10.5l2 2 3-3" stroke-width="2.2"/>
-                </svg>
-              </span>
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
               <div>
-                <div style="font-size: 0.86rem; font-weight: 700; color: #1e3f10;">Prepare as Jain Food</div>
-                <div style="font-size: 0.73rem; color: #4a5d3f;">Made strictly without onion, garlic, or root vegetables</div>
+                <div
+                  style="
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    color: var(--green-deep);
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                  "
+                >
+                  🥟 Add Extra Pieces
+                  <span
+                    style="
+                      font-size: 0.7rem;
+                      background: var(--gold);
+                      color: var(--text-dark);
+                      padding: 0.1rem 0.4rem;
+                      border-radius: 6px;
+                      font-weight: 700;
+                    "
+                    >+₹20 / piece</span
+                  >
+                </div>
+                <div
+                  style="
+                    font-size: 0.73rem;
+                    color: var(--brown-mid);
+                    margin-top: 0.15rem;
+                  "
+                >
+                  Add extra momo pieces to your order
+                </div>
+              </div>
+              <div class="qty-ctrl" style="margin-left: 0.5rem">
+                <button
+                  type="button"
+                  class="qty-btn"
+                  onclick="changeModalExtraPieces(-1)"
+                >
+                  −
+                </button>
+                <span class="qty-num" id="modalExtraPiecesCount">0</span>
+                <button
+                  type="button"
+                  class="qty-btn"
+                  onclick="changeModalExtraPieces(1)"
+                >
+                  +
+                </button>
               </div>
             </div>
-            <label class="jain-switch" style="position: relative; display: inline-block; width: 46px; height: 26px; margin: 0; cursor: pointer;">
-              <input type="checkbox" id="modalJainToggle" style="opacity: 0; width: 0; height: 0;" onchange="toggleModalJain(this)">
-              <span class="jain-slider" style="position: absolute; cursor: pointer; inset: 0; background-color: #ccc; transition: .3s; border-radius: 26px;"></span>
-            </label>
+            <div
+              id="modalExtraPieceSummary"
+              style="
+                display: none;
+                font-size: 0.75rem;
+                color: var(--green-deep);
+                font-weight: 700;
+                margin-top: 0.45rem;
+                text-align: right;
+              "
+            ></div>
           </div>
-        </div>
 
-        <div class="modal-label" style="margin-top: 1rem">
-          Cooking Instructions (Optional)
+          <!-- Jain Option Choice Toggle in Modal -->
+          <div
+            id="modalJainSection"
+            style="
+              display: none;
+              margin-top: 1rem;
+              padding: 0.75rem 0.9rem;
+              background: rgba(14, 56, 18, 0.08);
+              border: 1.5px solid rgba(45, 80, 22, 0.3);
+              border-radius: 12px;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div style="display: flex; align-items: center; gap: 0.5rem">
+                <span
+                  style="
+                    font-size: 1.3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 28px;
+                    height: 28px;
+                    background: rgba(30, 94, 24, 0.12);
+                    border-radius: 50%;
+                    flex-shrink: 0;
+                  "
+                >
+                  <svg
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    stroke="#1e5e18"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="width: 14px; height: 14px"
+                  >
+                    <path d="M10 2C7 5 5 8 5 11a5 5 0 0 0 10 0c0-3-2-6-5-9z" />
+                    <path d="M7.5 10.5l2 2 3-3" stroke-width="2.2" />
+                  </svg>
+                </span>
+                <div>
+                  <div
+                    style="font-size: 0.86rem; font-weight: 700; color: #1e3f10"
+                  >
+                    Prepare as Jain Food
+                  </div>
+                  <div style="font-size: 0.73rem; color: #4a5d3f">
+                    Made strictly without onion, garlic, or root vegetables
+                  </div>
+                </div>
+              </div>
+              <label
+                class="jain-switch"
+                style="
+                  position: relative;
+                  display: inline-block;
+                  width: 46px;
+                  height: 26px;
+                  margin: 0;
+                  cursor: pointer;
+                "
+              >
+                <input
+                  type="checkbox"
+                  id="modalJainToggle"
+                  style="opacity: 0; width: 0; height: 0"
+                  onchange="toggleModalJain(this)"
+                />
+                <span
+                  class="jain-slider"
+                  style="
+                    position: absolute;
+                    cursor: pointer;
+                    inset: 0;
+                    background-color: #ccc;
+                    transition: 0.3s;
+                    border-radius: 26px;
+                  "
+                ></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="modal-label" style="margin-top: 1rem">
+            Cooking Instructions (Optional)
+          </div>
+          <textarea
+            class="note-input"
+            id="modalNote"
+            rows="2"
+            placeholder="e.g. Extra spicy, no onions..."
+          ></textarea>
+          <button
+            class="btn-gold"
+            id="modalAddBtn"
+            style="width: 100%; justify-content: center; margin-top: 1.2rem"
+            onclick="confirmAddToCart()"
+          >
+            Add to Cart →
+          </button>
         </div>
-        <textarea
-          class="note-input"
-          id="modalNote"
-          rows="2"
-          placeholder="e.g. Extra spicy, no onions..."
-        ></textarea>
-        <button
-          class="btn-gold"
-          id="modalAddBtn"
-          style="width: 100%; justify-content: center; margin-top: 1.2rem"
-          onclick="confirmAddToCart()"
-        >
-          Add to Cart →
-        </button>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-box -->
-    </div><!-- /.modal-overlay -->
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-box -->
+    </div>
+    <!-- /.modal-overlay -->
 
     <!-- TOAST -->
     <div class="toast" id="toast"></div>
 
     <!-- STICKY CART (mobile) -->
     <button class="sticky-cart" onclick="openCart()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        style="width: 20px; height: 20px"
+      >
+        <circle cx="9" cy="21" r="1" />
+        <circle cx="20" cy="21" r="1" />
+        <path
+          d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+        />
+      </svg>
       <span class="sticky-cart-count" id="stickyCartCount">0</span>
     </button>
 
     <!-- BOTTOM NAV (mobile) -->
     <div class="bottom-nav">
       <div class="bottom-nav-inner">
-        <button
-          class="bottom-nav-item active"
-          onclick="showPage('home');"
-        >
+        <button class="bottom-nav-item active" onclick="showPage('home')">
           <span>
             <svg
               width="18"
@@ -2633,10 +2888,7 @@
           </span>
           <span>Home</span>
         </button>
-        <button
-          class="bottom-nav-item"
-          onclick="showPage('menu');"
-        >
+        <button class="bottom-nav-item" onclick="showPage('menu')">
           <span>
             <svg
               width="18"
@@ -2677,10 +2929,7 @@
           </span>
           <span>Cart</span>
         </button>
-        <button
-          class="bottom-nav-item"
-          onclick="showPage('about');"
-        >
+        <button class="bottom-nav-item" onclick="showPage('about')">
           <span>
             <svg
               width="18"
@@ -2699,10 +2948,7 @@
           </span>
           <span>About</span>
         </button>
-        <button
-          class="bottom-nav-item"
-          onclick="showPage('contact');"
-        >
+        <button class="bottom-nav-item" onclick="showPage('contact')">
           <span>
             <svg
               width="18"

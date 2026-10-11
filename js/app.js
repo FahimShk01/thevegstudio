@@ -89,6 +89,9 @@ function showPage(pageId, scrollToTop = true) {
 
   if (scrollToTop) {
     window.scrollTo(0, 0);
+    // Instantly snap nav back to solid when scrolling to top
+    const nav = document.getElementById("mainNav");
+    if (nav) nav.classList.remove("nav-scrolled");
   }
 
   _activePage = pageId;
@@ -132,6 +135,43 @@ window.addEventListener("DOMContentLoaded", () => {
     img.src = src;
   });
 });
+
+// ============================
+// NAVBAR SCROLL TRANSPARENCY
+// ============================
+(function () {
+  const nav = document.getElementById("mainNav");
+  if (!nav) return;
+
+  const THRESHOLD = 60; // px scrolled before going transparent
+  let ticking = false;
+  let lastScrollY = window.scrollY;
+
+  function updateNav() {
+    const scrolled = window.scrollY > THRESHOLD;
+    if (scrolled) {
+      nav.classList.add("nav-scrolled");
+    } else {
+      nav.classList.remove("nav-scrolled");
+    }
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", () => {
+    lastScrollY = window.scrollY;
+    if (!ticking) {
+      requestAnimationFrame(updateNav);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Re-check on every page switch (scroll resets to 0)
+  const _origShowPage = window.showPage;
+  // Wrapped via a small hook after DOM is ready
+  setTimeout(() => {
+    updateNav(); // initial state
+  }, 0);
+})();
 
 function setActiveBottomNav(el) {
   document
@@ -305,7 +345,7 @@ function buildItemCard(item, cat) {
     return `
     <div class="item-card item-card--photo item-card--horiz" onclick="openModal(${JSON.stringify(item).replace(/"/g, "&quot;")})">
       <div class="item-card-img-wrap item-card-img-wrap--side">
-        <img class="item-card-img" src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.onerror=null;this.src='assets/images/menu/placeholder-food.jpg'" />
+        <img class="item-card-img" src="${item.image}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/images/menu/placeholder-food.jpg'" />
         <div class="item-card-img-badges">
           <div class="veg-dot"></div>
           ${badgeHtml}
@@ -329,7 +369,7 @@ function buildItemCard(item, cat) {
     return `
     <div class="item-card item-card--photo" onclick="openModal(${JSON.stringify(item).replace(/"/g, "&quot;")})">
       <div class="item-card-img-wrap">
-        <img class="item-card-img" src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.onerror=null;this.src='assets/images/menu/placeholder-food.jpg'" />
+        <img class="item-card-img" src="${item.image}" alt="${item.name}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/images/menu/placeholder-food.jpg'" />
         <div class="item-card-img-overlay"></div>
         <div class="item-card-img-badges">
           <div class="veg-dot"></div>
